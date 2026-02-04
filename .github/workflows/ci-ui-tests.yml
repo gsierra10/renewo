@@ -1,0 +1,120 @@
+name: UI Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 0'
+
+jobs:
+  ui-tests:
+    name: Run UI tests
+    runs-on: macos-14
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select latest stable Xcode
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          xcode_app="$(find /Applications -maxdepth 1 -type d -name 'Xcode*.app' | grep -viE 'beta|rc' | sort -V | tail -n 1 || true)"
+          if [[ -z "${xcode_app}" ]]; then
+            xcode_app="/Applications/Xcode.app"
+          fi
+
+          sudo xcode-select -s "${xcode_app}/Contents/Developer"
+          xcodebuild -version
+
+      - name: Select iOS simulator destination
+        id: simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          simctl_output="$(xcrun simctl list devices available)"
+
+          preferred_names=(
+            "iPhone 15"
+            "iPhone 16"
+            "iPhone 17"
+          )
+
+          chosen_id=""
+          chosen_name=""
+
+          pick_udid_for_name() {
+            local device_name="$1"
+            printf '%s\n' "$simctl_output" | awk -v target="$device_name" '
+              index($0, target " (") > 0 {
+                if (match($0, /\(([0-9A-Fa-f-]{36})\)/)) {
+                  print substr($0, RSTART + 1, RLENGTH - 2)
+                  exit
+                }
+              }'
+          }
+
+          for preferred in "${preferred_names[@]}"; do
+            candidate_id="$(pick_udid_for_name "$preferred")"
+            if [[ -n "$candidate_id" ]]; then
+              chosen_id="$candidate_id"
+              chosen_name="$preferred"
+              break
+            fi
+          done
+
+          if [[ -z "$chosen_id" ]]; then
+            chosen_id="$(printf '%s\n' "$simctl_output" | awk '
+              /^[[:space:]]*iPhone / {
+                if (match($0, /\(([0-9A-Fa-f-]{36})\)/)) {
+                  print substr($0, RSTART + 1, RLENGTH - 2)
+                  exit
+                }
+              }')"
+            chosen_name="first available iPhone"
+          fi
+
+          if [[ -z "$chosen_id" ]]; then
+            echo "No available iOS Simulator devices found via simctl."
+            echo "$simctl_output"
+            exit 1
+          fi
+
+          echo "Using simulator: $chosen_name ($chosen_id)"
+          echo "destination=id=$chosen_id" >> "$GITHUB_OUTPUT"
+
+      - name: Run UI tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p TestResults
+
+          if command -v xcpretty >/dev/null 2>&1; then
+            xcodebuild \
+              -project Renewo.xcodeproj \
+              -scheme Renewo \
+              -destination "${{ steps.simulator.outputs.destination }}" \
+              -only-testing:RenewoUITests \
+              -resultBundlePath TestResults/UITests.xcresult \
+              test | xcpretty
+          else
+            xcodebuild \
+              -project Renewo.xcodeproj \
+              -scheme Renewo \
+              -destination "${{ steps.simulator.outputs.destination }}" \
+              -only-testing:RenewoUITests \
+              -resultBundlePath TestResults/UITests.xcresult \
+              -quiet \
+              test
+          fi
+
+      - name: Upload UI test results on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: UITests.xcresult
+          path: TestResults/UITests.xcresult
+          retention-days: 7
+          if-no-files-found: warn
