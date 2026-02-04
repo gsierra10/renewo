@@ -27,3 +27,16 @@ Run UI tests from Xcode: Test Navigator (⌘6) → RenewoUITests.
 - `RenewoBasicFlowUITests` covers add/edit/delete and Settings basics.
 - `FreeLimitUITests` verifies the free limit upgrade sheet.
 
+## CI helper
+
+After pushing to `main`, wait for GitHub Actions and fail fast if CI fails:
+
+```bash
+scripts/watch_ci.sh
+```
+
+Optional arguments:
+
+```bash
+scripts/watch_ci.sh "CI Unit Tests" main
+```
