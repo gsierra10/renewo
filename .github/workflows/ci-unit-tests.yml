@@ -44,8 +44,10 @@ jobs:
         run: |
           set -euo pipefail
 
+          destinations_output="$(xcodebuild -project Renewo.xcodeproj -scheme Renewo -showdestinations 2>&1 || true)"
+
           candidates_file="$(mktemp)"
-          xcodebuild -project Renewo.xcodeproj -scheme Renewo -showdestinations \
+          printf '%s\n' "$destinations_output" \
             | awk '
               /platform:iOS Simulator/ {
                 id = ""
@@ -73,8 +75,10 @@ jobs:
           rm -f "$candidates_file"
 
           if [[ ${#candidates[@]} -eq 0 ]]; then
-            echo "No iOS Simulator destinations found."
-            exit 1
+            echo "No parsed iOS Simulator destinations found; falling back to generic simulator destination."
+            echo "$destinations_output"
+            echo "destination=platform=iOS Simulator" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
           preferred_names=(
