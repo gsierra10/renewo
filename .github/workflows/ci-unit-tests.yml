@@ -44,42 +44,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          destinations_output="$(xcodebuild -project Renewo.xcodeproj -scheme Renewo -showdestinations 2>&1 || true)"
-
-          candidates_file="$(mktemp)"
-          printf '%s\n' "$destinations_output" \
-            | awk '
-              /platform:iOS Simulator/ {
-                id = ""
-                name = ""
-                count = split($0, parts, ", ")
-                for (i = 1; i <= count; i++) {
-                  if (index(parts[i], "id:") > 0) {
-                    sub(/^.*id:/, "", parts[i])
-                    id = parts[i]
-                  } else if (index(parts[i], "name:") > 0) {
-                    sub(/^.*name:/, "", parts[i])
-                    sub(/ }.*/, "", parts[i])
-                    name = parts[i]
-                  }
-                }
-                if (id != "" && name != "" && id !~ /^dvtdevice-DVTiOSDeviceSimulatorPlaceholder/ && !seen[id]++) {
-                  print id "|" name
-                }
-              }' > "$candidates_file"
-
-          candidates=()
-          while IFS= read -r candidate; do
-            candidates+=("$candidate")
-          done < "$candidates_file"
-          rm -f "$candidates_file"
-
-          if [[ ${#candidates[@]} -eq 0 ]]; then
-            echo "No parsed iOS Simulator destinations found; falling back to generic simulator destination."
-            echo "$destinations_output"
-            echo "destination=platform=iOS Simulator" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          simctl_output="$(xcrun simctl list devices available)"
 
           preferred_names=(
             "iPhone 16"
@@ -88,39 +53,59 @@ jobs:
             "iPhone SE (3rd generation)"
           )
 
-          chosen=""
+          chosen_id=""
           chosen_name=""
+
+          pick_udid_for_name() {
+            local device_name="$1"
+            printf '%s\n' "$simctl_output" | awk -v target="$device_name" '
+              index($0, target " (") > 0 {
+                if (match($0, /\(([0-9A-Fa-f-]{36})\)/)) {
+                  print substr($0, RSTART + 1, RLENGTH - 2)
+                  exit
+                }
+              }'
+          }
+
           for preferred in "${preferred_names[@]}"; do
-            for candidate in "${candidates[@]}"; do
-              simulator_id="${candidate%%|*}"
-              simulator_name="${candidate#*|}"
-              if [[ "$simulator_name" == "$preferred" ]]; then
-                chosen="$simulator_id"
-                chosen_name="$simulator_name"
-                break 2
-              fi
-            done
+            candidate_id="$(pick_udid_for_name "$preferred")"
+            if [[ -n "$candidate_id" ]]; then
+              chosen_id="$candidate_id"
+              chosen_name="$preferred"
+              break
+            fi
           done
 
-          if [[ -z "$chosen" ]]; then
-            for candidate in "${candidates[@]}"; do
-              simulator_id="${candidate%%|*}"
-              simulator_name="${candidate#*|}"
-              if [[ "$simulator_name" == iPhone* ]]; then
-                chosen="$simulator_id"
-                chosen_name="$simulator_name"
-                break
-              fi
-            done
+          if [[ -z "$chosen_id" ]]; then
+            chosen_id="$(printf '%s\n' "$simctl_output" | awk '
+              /^[[:space:]]*iPhone / {
+                if (match($0, /\(([0-9A-Fa-f-]{36})\)/)) {
+                  print substr($0, RSTART + 1, RLENGTH - 2)
+                  exit
+                }
+              }')"
+            chosen_name="first available iPhone"
           fi
 
-          if [[ -z "$chosen" ]]; then
-            chosen="${candidates[0]%%|*}"
-            chosen_name="${candidates[0]#*|}"
+          if [[ -z "$chosen_id" ]]; then
+            chosen_id="$(printf '%s\n' "$simctl_output" | awk '
+              /^[[:space:]]*iP(hone|ad) / {
+                if (match($0, /\(([0-9A-Fa-f-]{36})\)/)) {
+                  print substr($0, RSTART + 1, RLENGTH - 2)
+                  exit
+                }
+              }')"
+            chosen_name="first available iOS simulator"
           fi
 
-          echo "Using simulator: $chosen_name ($chosen)"
-          echo "destination=id=$chosen" >> "$GITHUB_OUTPUT"
+          if [[ -z "$chosen_id" ]]; then
+            echo "No available iOS Simulator devices found via simctl."
+            echo "$simctl_output"
+            exit 1
+          fi
+
+          echo "Using simulator: $chosen_name ($chosen_id)"
+          echo "destination=id=$chosen_id" >> "$GITHUB_OUTPUT"
 
       - name: Run unit tests
         shell: bash
