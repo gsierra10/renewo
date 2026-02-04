@@ -38,6 +38,86 @@ jobs:
             -scheme Renewo \
             -resolvePackageDependencies
 
+      - name: Select iOS simulator destination
+        id: simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          candidates_file="$(mktemp)"
+          xcodebuild -project Renewo.xcodeproj -scheme Renewo -showdestinations \
+            | awk '
+              /platform:iOS Simulator/ {
+                id = ""
+                name = ""
+                count = split($0, parts, ", ")
+                for (i = 1; i <= count; i++) {
+                  if (index(parts[i], "id:") > 0) {
+                    sub(/^.*id:/, "", parts[i])
+                    id = parts[i]
+                  } else if (index(parts[i], "name:") > 0) {
+                    sub(/^.*name:/, "", parts[i])
+                    sub(/ }.*/, "", parts[i])
+                    name = parts[i]
+                  }
+                }
+                if (id != "" && name != "" && id !~ /^dvtdevice-DVTiOSDeviceSimulatorPlaceholder/ && !seen[id]++) {
+                  print id "|" name
+                }
+              }' > "$candidates_file"
+
+          candidates=()
+          while IFS= read -r candidate; do
+            candidates+=("$candidate")
+          done < "$candidates_file"
+          rm -f "$candidates_file"
+
+          if [[ ${#candidates[@]} -eq 0 ]]; then
+            echo "No iOS Simulator destinations found."
+            exit 1
+          fi
+
+          preferred_names=(
+            "iPhone 16"
+            "iPhone 15"
+            "iPhone 14"
+            "iPhone SE (3rd generation)"
+          )
+
+          chosen=""
+          chosen_name=""
+          for preferred in "${preferred_names[@]}"; do
+            for candidate in "${candidates[@]}"; do
+              simulator_id="${candidate%%|*}"
+              simulator_name="${candidate#*|}"
+              if [[ "$simulator_name" == "$preferred" ]]; then
+                chosen="$simulator_id"
+                chosen_name="$simulator_name"
+                break 2
+              fi
+            done
+          done
+
+          if [[ -z "$chosen" ]]; then
+            for candidate in "${candidates[@]}"; do
+              simulator_id="${candidate%%|*}"
+              simulator_name="${candidate#*|}"
+              if [[ "$simulator_name" == iPhone* ]]; then
+                chosen="$simulator_id"
+                chosen_name="$simulator_name"
+                break
+              fi
+            done
+          fi
+
+          if [[ -z "$chosen" ]]; then
+            chosen="${candidates[0]%%|*}"
+            chosen_name="${candidates[0]#*|}"
+          fi
+
+          echo "Using simulator: $chosen_name ($chosen)"
+          echo "destination=id=$chosen" >> "$GITHUB_OUTPUT"
+
       - name: Run unit tests
         shell: bash
         run: |
@@ -48,7 +128,7 @@ jobs:
             xcodebuild \
               -project Renewo.xcodeproj \
               -scheme Renewo \
-              -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" \
+              -destination "${{ steps.simulator.outputs.destination }}" \
               -only-testing:RenewoTests \
               -resultBundlePath TestResults/UnitTests.xcresult \
               test | xcpretty
@@ -56,7 +136,7 @@ jobs:
             xcodebuild \
               -project Renewo.xcodeproj \
               -scheme Renewo \
-              -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" \
+              -destination "${{ steps.simulator.outputs.destination }}" \
               -only-testing:RenewoTests \
               -resultBundlePath TestResults/UnitTests.xcresult \
               test
