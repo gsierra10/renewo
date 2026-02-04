@@ -1,0 +1,37 @@
+{
+  "identifier" : "RENEWO_STOREKIT",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "€4.99",
+      "familyShareable" : false,
+      "internalID" : "PROLIFE1",
+      "localizations" : [
+        {
+          "description" : "Unlock Renewo Pro features.",
+          "displayName" : "Renewo Pro Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.renewo.pro.lifetime",
+      "referenceName" : "Renewo Pro Lifetime",
+      "type" : "Non-Consumable"
+    }
+  ],
+  "settings" : {
+    "enableAppStoreServerNotifications" : false,
+    "enableIntroOfferEligibilityOverride" : false,
+    "enablePriceIncreaseSimulation" : false,
+    "enableTransactionFailureSimulation" : false,
+    "failureReason" : "none"
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

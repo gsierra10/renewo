@@ -1,0 +1,548 @@
+
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+
+		2E46DE5D207AB3369FB5A01B  = {isa = PBXBuildFile; fileRef = 6D4098378C043B91BE222CFA ; };
+		4462B3BE9284517AF119F8C6  = {isa = PBXBuildFile; fileRef = D1AC6A6F75BCD71E3D3B28BE ; };
+		6B64867FEEF3916012496615  = {isa = PBXBuildFile; fileRef = F3EF11D89D579C47FB8F71F7 ; };
+		854196CA90FBE422B2611A80  = {isa = PBXBuildFile; fileRef = 65FBAEA608F86ED0367CD7CC ; };
+		A234086BDDD71ED7E38D61F6  = {isa = PBXBuildFile; fileRef = C7BDD766E031544A90BCF7F2 ; };
+		A6AAEB1AA42D35F072F2C8A7  = {isa = PBXBuildFile; fileRef = 88B42730FB98B80D17BE6F2F ; };
+		B810AF2C77E025D4C99711E3  = {isa = PBXBuildFile; fileRef = 0A56A2F721EDAB1A80B76403 ; };
+		C3D4E5F6A7B80718293A4B68  = {isa = PBXBuildFile; fileRef = C2D3E4F5A6B70718293A4B62 ; };
+		D3E4F5A6B7C80718293A4B69  = {isa = PBXBuildFile; fileRef = D2E3F4A5B6C70718293A4B63 ; };
+		E3F4A5B6C7D80718293A4B6A  = {isa = PBXBuildFile; fileRef = E2F3A4B5C6D70718293A4B64 ; };
+		F3A4B5C6D7E80718293A4B6B  = {isa = PBXBuildFile; fileRef = A3B4C5D6E7F80718293A4B66 ; };
+		F69D92F38F79CB125EC8E906  = {isa = PBXBuildFile; fileRef = DB170C53AF402F14C535EC11 ; };
+		716574F14934C8973818AE1D  = {isa = PBXBuildFile; fileRef = A482351C98484E7F0A866BA2 ; };
+		7759375050818C9AA1FFACDA  = {isa = PBXBuildFile; fileRef = FE496E35C745AE68BEAC7C27 ; };
+		D35FA67C3A7F1F721DEF1384  = {isa = PBXBuildFile; fileRef = 205C753B32F90D095C5AA135 ; };
+
+
+
+		A07F347ED74DEE999258FBCD  = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1B2C3D4E5F60718293A4B5C ;
+			proxyType = 1;
+			remoteGlobalIDString = D4E5F6A7B8C90718293A4B6F;
+			remoteInfo = Renewo;
+		};
+
+
+
+		0A56A2F721EDAB1A80B76403  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceEngine.swift; sourceTree = "<group>"; };
+		65FBAEA608F86ED0367CD7CC  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycle.swift; sourceTree = "<group>"; };
+		6D4098378C043B91BE222CFA  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsCalculatorTests.swift; sourceTree = "<group>"; };
+		88B42730FB98B80D17BE6F2F  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceEngineTests.swift; sourceTree = "<group>"; };
+		A3B4C5D6E7F80718293A4B66  = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B338F109223FE79DE27E8490  = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = RenewoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C4D5E6F7A80718293A4B67  = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Renewo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D3E4F5A6B70718293A4B62  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoApp.swift; sourceTree = "<group>"; };
+		C7BDD766E031544A90BCF7F2  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		D1AC6A6F75BCD71E3D3B28BE  = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		D2E3F4A5B6C70718293A4B63  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E2F3A4B5C6D70718293A4B64  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		F2A3B4C5D6E70718293A4B65  = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EF11D89D579C47FB8F71F7  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsCalculator.swift; sourceTree = "<group>"; };
+		DB170C53AF402F14C535EC11  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		A482351C98484E7F0A866BA2  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription+CoreDataClass.swift; sourceTree = "<group>"; };
+		FE496E35C745AE68BEAC7C27  = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription+CoreDataProperties.swift; sourceTree = "<group>"; };
+		3BD6363B2B1B9F16E4DA1552  = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Renewo.xcdatamodel; sourceTree = "<group>"; };
+
+
+
+		08920B21F1AC3FE319FE5902  = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4462B3BE9284517AF119F8C6 ,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4D5E6F7A8B90718293A4B6E  = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+
+
+		59548F884374C97C3E4D37FF  = {
+			isa = PBXGroup;
+			children = (
+				D1AC6A6F75BCD71E3D3B28BE ,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2B3C4D5E6F70718293A4B60  = {
+			isa = PBXGroup;
+			children = (
+				B2C3D4E5F6A70718293A4B61 ,
+				D2E3F4A5B6C70718293A4B63 ,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D95B11FA3438A8B8E8EF72D6  = {
+			isa = PBXGroup;
+			children = (
+				205C753B32F90D095C5AA135 ,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		101255F810D896A579E5E530  = {
+			isa = PBXGroup;
+			children = (
+				A482351C98484E7F0A866BA2 ,
+				FE496E35C745AE68BEAC7C27 ,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		F0E56FA8C16FC9FAAEF8179B  = {
+			isa = PBXGroup;
+			children = (
+				D95B11FA3438A8B8E8EF72D6 ,
+				DB170C53AF402F14C535EC11 ,
+				101255F810D896A579E5E530 ,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B2C3D4E5F6A70718293A4B61  = {
+			isa = PBXGroup;
+			children = (
+				E2F3A4B5C6D70718293A4B64 ,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		D1E2F3A4B5C60718293A4B5D = {
+			isa = PBXGroup;
+			children = (
+				F1A2B3C4D5E60718293A4B5F ,
+				FA5CF791533558333C66F0A1 ,
+				E1F2A3B4C5D60718293A4B5E ,
+				59548F884374C97C3E4D37FF ,
+			);
+			sourceTree = "<group>";
+		};
+		E1F2A3B4C5D60718293A4B5E  = {
+			isa = PBXGroup;
+			children = (
+				B3C4D5E6F7A80718293A4B67 ,
+				B338F109223FE79DE27E8490 ,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1A2B3C4D5E60718293A4B5F  = {
+			isa = PBXGroup;
+			children = (
+				A2B3C4D5E6F70718293A4B60 ,
+				F0E56FA8C16FC9FAAEF8179B ,
+				FADA7CC193FC3DCDDD9B1FEA ,
+				C2D3E4F5A6B70718293A4B62 ,
+				F2A3B4C5D6E70718293A4B65 ,
+				A3B4C5D6E7F80718293A4B66 ,
+			);
+			path = RenewoApp;
+			sourceTree = "<group>";
+		};
+		FA5CF791533558333C66F0A1  = {
+			isa = PBXGroup;
+			children = (
+				88B42730FB98B80D17BE6F2F ,
+				6D4098378C043B91BE222CFA ,
+			);
+			path = RenewoTests;
+			sourceTree = "<group>";
+		};
+		FADA7CC193FC3DCDDD9B1FEA  = {
+			isa = PBXGroup;
+			children = (
+				65FBAEA608F86ED0367CD7CC ,
+				0A56A2F721EDAB1A80B76403 ,
+				F3EF11D89D579C47FB8F71F7 ,
+				C7BDD766E031544A90BCF7F2 ,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+
+
+
+		892038067416BFCDA122214C  = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20534CEC4F33E4760BA2874 ;
+			buildPhases = (
+				E8C42D1F18A4A7CA724A96BB ,
+				29C585FDD34EA99C49735C5D ,
+				08920B21F1AC3FE319FE5902 ,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D23C73016974B3D7081E1135 ,
+			);
+			name = RenewoTests;
+			productName = RenewoTests;
+			productReference = B338F109223FE79DE27E8490 ;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4E5F6A7B8C90718293A4B6F  = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F5A6B7C8D90718293A4B70 ;
+			buildPhases = (
+				A4B5C6D7E8F90718293A4B6C ,
+				B4C5D6E7F8A90718293A4B6D ,
+				C4D5E6F7A8B90718293A4B6E ,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Renewo;
+			productName = Renewo;
+			productReference = B3C4D5E6F7A80718293A4B67 ;
+			productType = "com.apple.product-type.application";
+		};
+
+
+
+		A1B2C3D4E5F60718293A4B5C  = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					892038067416BFCDA122214C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D4E5F6A7B8C90718293A4B6F;
+					};
+					D4E5F6A7B8C90718293A4B6F = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = F4A5B6C7D8E90718293A4B71 ;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1E2F3A4B5C60718293A4B5D;
+			productRefGroup = E1F2A3B4C5D60718293A4B5E ;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4E5F6A7B8C90718293A4B6F ,
+				892038067416BFCDA122214C ,
+			);
+		};
+
+
+
+		29C585FDD34EA99C49735C5D  = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4C5D6E7F8A90718293A4B6D  = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A4B5C6D7E80718293A4B6B ,
+				D35FA67C3A7F1F721DEF1384 ,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+
+
+		A4B5C6D7E8F90718293A4B6C  = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D4E5F6A7B80718293A4B68 ,
+				D3E4F5A6B7C80718293A4B69 ,
+				E3F4A5B6C7D80718293A4B6A ,
+				854196CA90FBE422B2611A80 ,
+				B810AF2C77E025D4C99711E3 ,
+				6B64867FEEF3916012496615 ,
+				A234086BDDD71ED7E38D61F6 ,
+				F69D92F38F79CB125EC8E906 ,
+				716574F14934C8973818AE1D ,
+				7759375050818C9AA1FFACDA ,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C42D1F18A4A7CA724A96BB  = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6AAEB1AA42D35F072F2C8A7 ,
+				2E46DE5D207AB3369FB5A01B ,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+
+
+		D23C73016974B3D7081E1135  = {
+			isa = PBXTargetDependency;
+			target = D4E5F6A7B8C90718293A4B6F ;
+			targetProxy = A07F347ED74DEE999258FBCD ;
+		};
+
+
+
+		205C753B32F90D095C5AA135  = {
+			isa = XCVersionGroup;
+			children = (
+				3BD6363B2B1B9F16E4DA1552 ,
+			);
+			currentVersion = 3BD6363B2B1B9F16E4DA1552 ;
+			path = Renewo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+
+
+
+		1B68DF67E6E536E040F6EAAF  = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Renewo.app/Renewo";
+				TEST_TARGET_NAME = Renewo;
+			};
+			name = Debug;
+		};
+		A5B6C7D8E9F00718293A4B72  = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RenewoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		A756044AE3775AF9BB22ADD1  = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Renewo.app/Renewo";
+				TEST_TARGET_NAME = Renewo;
+			};
+			name = Release;
+		};
+		B5C6D7E8F9A00718293A4B73  = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = RenewoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		C5D6E7F8A9B00718293A4B74  = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D5E6F7A8B9C00718293A4B75  = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+
+
+
+		C20534CEC4F33E4760BA2874  = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B68DF67E6E536E040F6EAAF ,
+				A756044AE3775AF9BB22ADD1 ,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E4F5A6B7C8D90718293A4B70  = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B6C7D8E9F00718293A4B72 ,
+				B5C6D7E8F9A00718293A4B73 ,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F4A5B6C7D8E90718293A4B71  = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5D6E7F8A9B00718293A4B74 ,
+				D5E6F7A8B9C00718293A4B75 ,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+
+	};
+	rootObject = A1B2C3D4E5F60718293A4B5C ;
+}

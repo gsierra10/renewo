@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F1A876A8D6C79A13F546655 /* SubscriptionDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB147D0AB216EAFD9656CD /* SubscriptionDraft.swift */; };
+		174B15439C3385606A2F3D0B /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B181945DA80DF30038019BD /* SettingsStoreTests.swift */; };
+		23A02357ECA511228BD9E178 /* RenewoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE5DC94FA78E5FA039C77D /* RenewoApp.swift */; };
+		32800B1A2B19EBE07CBF5F2C /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683679062ED688F51708D1B /* RepositoryErrors.swift */; };
+		364B30AA0B6B36ECECC79883 /* ProGatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A5F7884621D111628D893 /* ProGatingTests.swift */; };
+		3A7FB2B9D2B2CC2BF50AF06A /* NotificationStatusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248BE92040D78AB431895034 /* NotificationStatusRow.swift */; };
+		3A9461D28156E9C85E593B4F /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FD216D63D17418E52D2D0 /* AppContainer.swift */; };
+		3DC9E28F5DB1E623A577EBD6 /* SubscriptionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35C0501E64B624AC4631B8 /* SubscriptionsListView.swift */; };
+		3E114088D036D3E3D38E90D8 /* ProGating.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34EE701EC6C0723785DD7F /* ProGating.swift */; };
+		43ABE3BF5D9AC7EB8BFFC69B /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40728417272DAB74140D267C /* SettingsStore.swift */; };
+		4C7186F4A8ADF489173D627D /* SubscriptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616A6DC31B310446F008E8B /* SubscriptionRowView.swift */; };
+		523515903B0D718973F1B54B /* UpgradeProView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D1320287448377F2C64B3 /* UpgradeProView.swift */; };
+		5D599875C7B2E1336614EBA2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F50540A7EDCA5B4EEC0A0F9 /* RootView.swift */; };
+		62222353766E0325C091170D /* UpgradeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A25B7EC0100F3713E2652 /* UpgradeSheetView.swift */; };
+		64E9A5B3104F9D25303D93B2 /* UNNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E88E10580F30ADA879E946 /* UNNotificationScheduler.swift */; };
+		67D715976846B70CF3A1B613 /* Renewo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C08E026D8B2BA8AD5E3B4ED /* Renewo.xcdatamodeld */; };
+		697E49A03946BDB535ADBC2B /* SubscriptionsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375939C32E005E6FB63ABED /* SubscriptionsRepositoryTests.swift */; };
+		6BB35269CFC6153263857938 /* EntitlementsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B353363E50D7E775D6F2EC /* EntitlementsStore.swift */; };
+		75BDCF467A4E836CF3812BE1 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E53687282F91CA8360203 /* EmptyStateView.swift */; };
+		7F55E84F9681B98C7B765109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02605E88EB1312427C89AEDC /* Assets.xcassets */; };
+		8D565A03F0AB4E9DF161652E /* TotalsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D49A2A09115E67425209A /* TotalsCalculator.swift */; };
+		94360CDF8CBE798EDEF4FD46 /* TotalsCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E4EE2A384F00B9FD14984 /* TotalsCalculatorTests.swift */; };
+		9639911B08FD8FC2244218BC /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA870573CA7570574185C68B /* CurrencyFormatter.swift */; };
+		9A9CC3B953AA71B3830A13FC /* BillingCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B3ABC4AA0DF28D2993A370 /* BillingCycle.swift */; };
+		A05CE9FAFF65705C0049A9E2 /* NotificationScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12139A5E48DACA078B2518AD /* NotificationScheduling.swift */; };
+		A2C3D4E5F6A7B8C9D0E1F2A3 /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D3E4F5A6B7C8D9E0F1A2 /* CSVExporter.swift */; };
+		B2C3D4E5F6A7B8C9D0E1F2B3 /* ExportCSVRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5A6B7C8D9E0F1B2 /* ExportCSVRow.swift */; };
+		BB741A7A8068BC162492EB10 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E7527DA285BDC443CCB28D /* XCTest.framework */; };
+		C22F5DB65CBBB990ED68C0E3 /* SubscriptionFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B59733CCD9E04E39D8BAD /* SubscriptionFormValidator.swift */; };
+		C2C3D4E5F6A7B8C9D0E1F2C3 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C2D3E4F5A6B7C8D9E0F1C2 /* ShareSheet.swift */; };
+		D28CD528BE726E70C2C5E561 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E7527DA285BDC443CCB28D /* XCTest.framework */; };
+		F6D1A2B3D4E5F60718293A4B /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1A2B3D4E5F60718293A4B /* L10n.swift */; };
+		F6F1A2B3D4E5F60718293A4B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E1A2B3D4E5F60718293A4B /* Localizable.strings */; };
+		F7F1A2B3D4E5F60718293A4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7E1A2B3D4E5F60718293A4B /* InfoPlist.strings */; };
+		D2C3D4E5F6A7B8C9D0E1F2D3 /* SmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C2D3E4F5A6B7C8D9E0F1D2 /* SmokeUITests.swift */; };
+		D5E4A7B9C1F243E0A8B6C7D2 /* FreeLimitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0F4C1E78A4F62B7C9D3A1 /* FreeLimitUITests.swift */; };
+		E352C23B1B849117305DE98D /* RenewoBasicFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1312799DA2C55BDD5D18AA78 /* RenewoBasicFlowUITests.swift */; };
+		A123B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A223B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift */; };
+		E3C6E5F0D2D122220BE4374C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96764D4CBAC7CFDC57B5C71 /* SettingsView.swift */; };
+		EC713170DEB6C4CABABD1CAE /* NotificationSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67942F5BC28B4658E029FE32 /* NotificationSchedulerTests.swift */; };
+		F1986187D25FEF061B71CAE8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9239E086BC8DD100F0E013 /* CoreDataStack.swift */; };
+		F34AC50CA170B823DFF79306 /* AddEditSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57386D4E651B15B053E64C /* AddEditSubscriptionView.swift */; };
+		F78A7EC08CF6C502273C66A1 /* TotalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46BD5BAC4D1E954C6DDEC1 /* TotalCardView.swift */; };
+		F7AC9FF81C92D4C2C5EE94B6 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F22A25799605AC0252DCFA1 /* SummaryView.swift */; };
+		F93E3E3F13C90335515C5D36 /* RecurrenceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FD9EEC39EA79497344D3B /* RecurrenceEngine.swift */; };
+		FB5EB8102453678EF5B9DAEF /* RecurrenceEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BB84C349BCAF30428B891E /* RecurrenceEngineTests.swift */; };
+		FD9A70746B88A044E5E90730 /* SubscriptionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6528C71A5D054E8EFD5C01 /* SubscriptionsRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC06616CD334B459E42220D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A67639F74080F56C5AA328F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCD8099EE02CAB83BB43E451;
+			remoteInfo = Renewo;
+		};
+		EC35654652AC986CC45A6C5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A67639F74080F56C5AA328F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCD8099EE02CAB83BB43E451;
+			remoteInfo = Renewo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF953B5F6504467B851B620E /* Renewo.storekit */ = {isa = PBXFileReference; lastKnownFileType = file.storekit; path = Renewo.storekit; sourceTree = "<group>"; };
+		02605E88EB1312427C89AEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E28F74155FF9382F8F35EF0 /* RenewoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = RenewoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12139A5E48DACA078B2518AD /* NotificationScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduling.swift; sourceTree = "<group>"; };
+		1312799DA2C55BDD5D18AA78 /* RenewoBasicFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoBasicFlowUITests.swift; sourceTree = "<group>"; };
+		248BE92040D78AB431895034 /* NotificationStatusRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStatusRow.swift; sourceTree = "<group>"; };
+		2F50540A7EDCA5B4EEC0A0F9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		361FD9EEC39EA79497344D3B /* RecurrenceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceEngine.swift; sourceTree = "<group>"; };
+		3E9239E086BC8DD100F0E013 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		40728417272DAB74140D267C /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		4F156F051968CEE13242AA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F22A25799605AC0252DCFA1 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		50BB84C349BCAF30428B891E /* RecurrenceEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceEngineTests.swift; sourceTree = "<group>"; };
+		5375939C32E005E6FB63ABED /* SubscriptionsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsRepositoryTests.swift; sourceTree = "<group>"; };
+		555A5F7884621D111628D893 /* ProGatingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProGatingTests.swift; sourceTree = "<group>"; };
+		58B3ABC4AA0DF28D2993A370 /* BillingCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycle.swift; sourceTree = "<group>"; };
+		5A0D1320287448377F2C64B3 /* UpgradeProView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeProView.swift; sourceTree = "<group>"; };
+		60E7527DA285BDC443CCB28D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		63CB147D0AB216EAFD9656CD /* SubscriptionDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDraft.swift; sourceTree = "<group>"; };
+		67942F5BC28B4658E029FE32 /* NotificationSchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSchedulerTests.swift; sourceTree = "<group>"; };
+		68B353363E50D7E775D6F2EC /* EntitlementsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitlementsStore.swift; sourceTree = "<group>"; };
+		6C6528C71A5D054E8EFD5C01 /* SubscriptionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsRepository.swift; sourceTree = "<group>"; };
+		6D5257D7653ACAAFA9D88CD6 /* Renewo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Renewo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E57386D4E651B15B053E64C /* AddEditSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditSubscriptionView.swift; sourceTree = "<group>"; };
+		71B98F50044AF8603F5C1DC8 /* RenewoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = RenewoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		753E4EE2A384F00B9FD14984 /* TotalsCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsCalculatorTests.swift; sourceTree = "<group>"; };
+		75E88E10580F30ADA879E946 /* UNNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationScheduler.swift; sourceTree = "<group>"; };
+		8B7FD216D63D17418E52D2D0 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		9A9B59733CCD9E04E39D8BAD /* SubscriptionFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFormValidator.swift; sourceTree = "<group>"; };
+		9B181945DA80DF30038019BD /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
+		9D46BD5BAC4D1E954C6DDEC1 /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
+		A1C2D3E4F5A6B7C8D9E0F1A2 /* CSVExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExporter.swift; sourceTree = "<group>"; };
+		A223B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRestoreUXUITests.swift; sourceTree = "<group>"; };
+		B0C811CC109398B89B50333B /* Renewo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Renewo.xcdatamodel; sourceTree = "<group>"; };
+		B1C2D3E4F5A6B7C8D9E0F1B2 /* ExportCSVRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCSVRow.swift; sourceTree = "<group>"; };
+		B2D0F4C1E78A4F62B7C9D3A1 /* FreeLimitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeLimitUITests.swift; sourceTree = "<group>"; };
+		B83A25B7EC0100F3713E2652 /* UpgradeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeSheetView.swift; sourceTree = "<group>"; };
+		C1C2D3E4F5A6B7C8D9E0F1C2 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		C683679062ED688F51708D1B /* RepositoryErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrors.swift; sourceTree = "<group>"; };
+		CF7D49A2A09115E67425209A /* TotalsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsCalculator.swift; sourceTree = "<group>"; };
+		D1C2D3E4F5A6B7C8D9E0F1D2 /* SmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeUITests.swift; sourceTree = "<group>"; };
+		D616A6DC31B310446F008E8B /* SubscriptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRowView.swift; sourceTree = "<group>"; };
+		DA870573CA7570574185C68B /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		DB35C0501E64B624AC4631B8 /* SubscriptionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsListView.swift; sourceTree = "<group>"; };
+		E52E53687282F91CA8360203 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		E96764D4CBAC7CFDC57B5C71 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ECFE5DC94FA78E5FA039C77D /* RenewoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoApp.swift; sourceTree = "<group>"; };
+		ED34EE701EC6C0723785DD7F /* ProGating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProGating.swift; sourceTree = "<group>"; };
+		F6C1A2B3D4E5F60718293A4B /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		F6E2A2B3D4E5F60718293A4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E3A2B3D4E5F60718293A4B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E4A2B3D4E5F60718293A4B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E5A2B3D4E5F60718293A4B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E6A2B3D4E5F60718293A4B /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F7E2A2B3D4E5F60718293A4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7E3A2B3D4E5F60718293A4B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7E4A2B3D4E5F60718293A4B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7E5A2B3D4E5F60718293A4B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7E6A2B3D4E5F60718293A4B /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3ACB4142F33C4362DCF45654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28CD528BE726E70C2C5E561 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26D7F79A73AFF5CFD450115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E78C3403049D3E8474F2A7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB741A7A8068BC162492EB10 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00386E67244AEC7A40BD9B6A /* AddEdit */ = {
+			isa = PBXGroup;
+			children = (
+				6E57386D4E651B15B053E64C /* AddEditSubscriptionView.swift */,
+				63CB147D0AB216EAFD9656CD /* SubscriptionDraft.swift */,
+				9A9B59733CCD9E04E39D8BAD /* SubscriptionFormValidator.swift */,
+			);
+			path = AddEdit;
+			sourceTree = "<group>";
+		};
+		01F40072E3CF347862554017 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60E7527DA285BDC443CCB28D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05A3DB46178754CF7BFBC872 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E96764D4CBAC7CFDC57B5C71 /* SettingsView.swift */,
+				248BE92040D78AB431895034 /* NotificationStatusRow.swift */,
+				5A0D1320287448377F2C64B3 /* UpgradeProView.swift */,
+				B1C2D3E4F5A6B7C8D9E0F1B2 /* ExportCSVRow.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0D499C0C453933268DB9FD03 /* Monetization */ = {
+			isa = PBXGroup;
+			children = (
+				68B353363E50D7E775D6F2EC /* EntitlementsStore.swift */,
+				ED34EE701EC6C0723785DD7F /* ProGating.swift */,
+			);
+			path = Monetization;
+			sourceTree = "<group>";
+		};
+		11A903343ED63BE7298C5DFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D46BD5BAC4D1E954C6DDEC1 /* TotalCardView.swift */,
+				E52E53687282F91CA8360203 /* EmptyStateView.swift */,
+				B83A25B7EC0100F3713E2652 /* UpgradeSheetView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3E8DE9EE1DFEEB5009CAE600 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				12139A5E48DACA078B2518AD /* NotificationScheduling.swift */,
+				75E88E10580F30ADA879E946 /* UNNotificationScheduler.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		4FC2D031C41885221C25F6AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C08E026D8B2BA8AD5E3B4ED /* Renewo.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53C9EFC6D892AA68BFCC8C92 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FD216D63D17418E52D2D0 /* AppContainer.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		5AB3CBBB2B1C9F8EBB5E5375 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB35C0501E64B624AC4631B8 /* SubscriptionsListView.swift */,
+				D616A6DC31B310446F008E8B /* SubscriptionRowView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		60D9C11F926C70F82C040E7E /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				4F22A25799605AC0252DCFA1 /* SummaryView.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		676226E236A23E238E3B1C77 = {
+			isa = PBXGroup;
+			children = (
+				CF7E31E4B1230ED8E7908EE7 /* RenewoApp */,
+				E99F73F289509DDDC3EBFFC5 /* RenewoTests */,
+				B8114E1A2543EF742252AE06 /* RenewoUITests */,
+				FC4C011F1BD38F1F34920FBD /* Products */,
+				01F40072E3CF347862554017 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8344B16103485A1C292BE01E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4FC2D031C41885221C25F6AA /* Model */,
+				3E9239E086BC8DD100F0E013 /* CoreDataStack.swift */,
+				40728417272DAB74140D267C /* SettingsStore.swift */,
+				C683679062ED688F51708D1B /* RepositoryErrors.swift */,
+				6C6528C71A5D054E8EFD5C01 /* SubscriptionsRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B8114E1A2543EF742252AE06 /* RenewoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1312799DA2C55BDD5D18AA78 /* RenewoBasicFlowUITests.swift */,
+				A223B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift */,
+				B2D0F4C1E78A4F62B7C9D3A1 /* FreeLimitUITests.swift */,
+				D1C2D3E4F5A6B7C8D9E0F1D2 /* SmokeUITests.swift */,
+			);
+			path = RenewoUITests;
+			sourceTree = "<group>";
+		};
+		CDF83FD989E60F210402362D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53C9EFC6D892AA68BFCC8C92 /* Environment */,
+				2F50540A7EDCA5B4EEC0A0F9 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CF7E31E4B1230ED8E7908EE7 /* RenewoApp */ = {
+			isa = PBXGroup;
+			children = (
+				CDF83FD989E60F210402362D /* App */,
+				8344B16103485A1C292BE01E /* Data */,
+				3E8DE9EE1DFEEB5009CAE600 /* Notifications */,
+				0D499C0C453933268DB9FD03 /* Monetization */,
+				EC9E7A7D35543045E1185A86 /* UI */,
+				F76FDC6C369AAD6B68B75B48 /* Domain */,
+				ECFE5DC94FA78E5FA039C77D /* RenewoApp.swift */,
+				4F156F051968CEE13242AA24 /* Info.plist */,
+				02605E88EB1312427C89AEDC /* Assets.xcassets */,
+				F6E1A2B3D4E5F60718293A4B /* Localizable.strings */,
+				F7E1A2B3D4E5F60718293A4B /* InfoPlist.strings */,
+				FF953B5F6504467B851B620E /* Renewo.storekit */,
+			);
+			path = RenewoApp;
+			sourceTree = "<group>";
+		};
+		E1C2D3E4F5A6B7C8D9E0F1E2 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				C1C2D3E4F5A6B7C8D9E0F1C2 /* ShareSheet.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		E99F73F289509DDDC3EBFFC5 /* RenewoTests */ = {
+			isa = PBXGroup;
+			children = (
+				50BB84C349BCAF30428B891E /* RecurrenceEngineTests.swift */,
+				753E4EE2A384F00B9FD14984 /* TotalsCalculatorTests.swift */,
+				67942F5BC28B4658E029FE32 /* NotificationSchedulerTests.swift */,
+				9B181945DA80DF30038019BD /* SettingsStoreTests.swift */,
+				555A5F7884621D111628D893 /* ProGatingTests.swift */,
+				5375939C32E005E6FB63ABED /* SubscriptionsRepositoryTests.swift */,
+			);
+			path = RenewoTests;
+			sourceTree = "<group>";
+		};
+		EC9E7A7D35543045E1185A86 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5AB3CBBB2B1C9F8EBB5E5375 /* Main */,
+				11A903343ED63BE7298C5DFE /* Components */,
+				00386E67244AEC7A40BD9B6A /* AddEdit */,
+				60D9C11F926C70F82C040E7E /* Summary */,
+				05A3DB46178754CF7BFBC872 /* Settings */,
+				E1C2D3E4F5A6B7C8D9E0F1E2 /* Share */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F76FDC6C369AAD6B68B75B48 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				58B3ABC4AA0DF28D2993A370 /* BillingCycle.swift */,
+				361FD9EEC39EA79497344D3B /* RecurrenceEngine.swift */,
+				CF7D49A2A09115E67425209A /* TotalsCalculator.swift */,
+				DA870573CA7570574185C68B /* CurrencyFormatter.swift */,
+				A1C2D3E4F5A6B7C8D9E0F1A2 /* CSVExporter.swift */,
+				F6C1A2B3D4E5F60718293A4B /* L10n.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FC4C011F1BD38F1F34920FBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D5257D7653ACAAFA9D88CD6 /* Renewo.app */,
+				71B98F50044AF8603F5C1DC8 /* RenewoTests.xctest */,
+				0E28F74155FF9382F8F35EF0 /* RenewoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF29EB22ADB0138D418793AB /* RenewoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497CB435FD98024353B7C60E /* Build configuration list for PBXNativeTarget "RenewoUITests" */;
+			buildPhases = (
+				5E8AACA475A0A56A91068A6D /* Sources */,
+				D324E1701114132E3CC2668E /* Resources */,
+				3ACB4142F33C4362DCF45654 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B7EE82CDEFA19F906327549 /* PBXTargetDependency */,
+			);
+			name = RenewoUITests;
+			productName = RenewoUITests;
+			productReference = 0E28F74155FF9382F8F35EF0 /* RenewoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CCD8099EE02CAB83BB43E451 /* Renewo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7570CF1DCB92107C907CBEAC /* Build configuration list for PBXNativeTarget "Renewo" */;
+			buildPhases = (
+				BFE8C26B715568B9126BEF73 /* Sources */,
+				FECDE3B53F79A8AFBA701070 /* Resources */,
+				D26D7F79A73AFF5CFD450115 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Renewo;
+			productName = Renewo;
+			productReference = 6D5257D7653ACAAFA9D88CD6 /* Renewo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9AB2845AD0F3D761F3D0201 /* RenewoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDD60132F96AA87E5A4BB15 /* Build configuration list for PBXNativeTarget "RenewoTests" */;
+			buildPhases = (
+				0BF8E28D3E14BE535893B805 /* Sources */,
+				98E7D8A50F510DC6C4393A96 /* Resources */,
+				E78C3403049D3E8474F2A7DC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C947E0DEDC8B137913993ED6 /* PBXTargetDependency */,
+			);
+			name = RenewoTests;
+			productName = RenewoTests;
+			productReference = 71B98F50044AF8603F5C1DC8 /* RenewoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A67639F74080F56C5AA328F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					AF29EB22ADB0138D418793AB = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CCD8099EE02CAB83BB43E451;
+					};
+					CCD8099EE02CAB83BB43E451 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F9AB2845AD0F3D761F3D0201 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CCD8099EE02CAB83BB43E451;
+					};
+				};
+			};
+			buildConfigurationList = DA209DA99098B260FF3AC1C9 /* Build configuration list for PBXProject "Renewo" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+				de,
+				fr,
+				it,
+			);
+			mainGroup = 676226E236A23E238E3B1C77;
+			productRefGroup = FC4C011F1BD38F1F34920FBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCD8099EE02CAB83BB43E451 /* Renewo */,
+				F9AB2845AD0F3D761F3D0201 /* RenewoTests */,
+				AF29EB22ADB0138D418793AB /* RenewoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98E7D8A50F510DC6C4393A96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D324E1701114132E3CC2668E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECDE3B53F79A8AFBA701070 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F55E84F9681B98C7B765109 /* Assets.xcassets in Resources */,
+				F6F1A2B3D4E5F60718293A4B /* Localizable.strings in Resources */,
+				F7F1A2B3D4E5F60718293A4B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BF8E28D3E14BE535893B805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB5EB8102453678EF5B9DAEF /* RecurrenceEngineTests.swift in Sources */,
+				94360CDF8CBE798EDEF4FD46 /* TotalsCalculatorTests.swift in Sources */,
+				174B15439C3385606A2F3D0B /* SettingsStoreTests.swift in Sources */,
+				EC713170DEB6C4CABABD1CAE /* NotificationSchedulerTests.swift in Sources */,
+				364B30AA0B6B36ECECC79883 /* ProGatingTests.swift in Sources */,
+				697E49A03946BDB535ADBC2B /* SubscriptionsRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8AACA475A0A56A91068A6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A123B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift in Sources */,
+				E352C23B1B849117305DE98D /* RenewoBasicFlowUITests.swift in Sources */,
+				D5E4A7B9C1F243E0A8B6C7D2 /* FreeLimitUITests.swift in Sources */,
+				D2C3D4E5F6A7B8C9D0E1F2D3 /* SmokeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8C26B715568B9126BEF73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A02357ECA511228BD9E178 /* RenewoApp.swift in Sources */,
+				5D599875C7B2E1336614EBA2 /* RootView.swift in Sources */,
+				3A9461D28156E9C85E593B4F /* AppContainer.swift in Sources */,
+				9A9CC3B953AA71B3830A13FC /* BillingCycle.swift in Sources */,
+				F93E3E3F13C90335515C5D36 /* RecurrenceEngine.swift in Sources */,
+				8D565A03F0AB4E9DF161652E /* TotalsCalculator.swift in Sources */,
+				9639911B08FD8FC2244218BC /* CurrencyFormatter.swift in Sources */,
+				F1986187D25FEF061B71CAE8 /* CoreDataStack.swift in Sources */,
+				43ABE3BF5D9AC7EB8BFFC69B /* SettingsStore.swift in Sources */,
+				A05CE9FAFF65705C0049A9E2 /* NotificationScheduling.swift in Sources */,
+				64E9A5B3104F9D25303D93B2 /* UNNotificationScheduler.swift in Sources */,
+				6BB35269CFC6153263857938 /* EntitlementsStore.swift in Sources */,
+				3E114088D036D3E3D38E90D8 /* ProGating.swift in Sources */,
+				32800B1A2B19EBE07CBF5F2C /* RepositoryErrors.swift in Sources */,
+				FD9A70746B88A044E5E90730 /* SubscriptionsRepository.swift in Sources */,
+				3DC9E28F5DB1E623A577EBD6 /* SubscriptionsListView.swift in Sources */,
+				4C7186F4A8ADF489173D627D /* SubscriptionRowView.swift in Sources */,
+				F78A7EC08CF6C502273C66A1 /* TotalCardView.swift in Sources */,
+				75BDCF467A4E836CF3812BE1 /* EmptyStateView.swift in Sources */,
+				F34AC50CA170B823DFF79306 /* AddEditSubscriptionView.swift in Sources */,
+				0F1A876A8D6C79A13F546655 /* SubscriptionDraft.swift in Sources */,
+				C22F5DB65CBBB990ED68C0E3 /* SubscriptionFormValidator.swift in Sources */,
+				62222353766E0325C091170D /* UpgradeSheetView.swift in Sources */,
+				F7AC9FF81C92D4C2C5EE94B6 /* SummaryView.swift in Sources */,
+				E3C6E5F0D2D122220BE4374C /* SettingsView.swift in Sources */,
+				3A7FB2B9D2B2CC2BF50AF06A /* NotificationStatusRow.swift in Sources */,
+				523515903B0D718973F1B54B /* UpgradeProView.swift in Sources */,
+				67D715976846B70CF3A1B613 /* Renewo.xcdatamodeld in Sources */,
+				A2C3D4E5F6A7B8C9D0E1F2A3 /* CSVExporter.swift in Sources */,
+				B2C3D4E5F6A7B8C9D0E1F2B3 /* ExportCSVRow.swift in Sources */,
+				C2C3D4E5F6A7B8C9D0E1F2C3 /* ShareSheet.swift in Sources */,
+				F6D1A2B3D4E5F60718293A4B /* L10n.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B7EE82CDEFA19F906327549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCD8099EE02CAB83BB43E451 /* Renewo */;
+			targetProxy = EC35654652AC986CC45A6C5C /* PBXContainerItemProxy */;
+		};
+		C947E0DEDC8B137913993ED6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCD8099EE02CAB83BB43E451 /* Renewo */;
+			targetProxy = CC06616CD334B459E42220D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6E1A2B3D4E5F60718293A4B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E2A2B3D4E5F60718293A4B /* en */,
+				F6E3A2B3D4E5F60718293A4B /* es */,
+				F6E4A2B3D4E5F60718293A4B /* de */,
+				F6E5A2B3D4E5F60718293A4B /* fr */,
+				F6E6A2B3D4E5F60718293A4B /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F7E1A2B3D4E5F60718293A4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7E2A2B3D4E5F60718293A4B /* en */,
+				F7E3A2B3D4E5F60718293A4B /* es */,
+				F7E4A2B3D4E5F60718293A4B /* de */,
+				F7E5A2B3D4E5F60718293A4B /* fr */,
+				F7E6A2B3D4E5F60718293A4B /* it */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		197CC897A50D18ABCE8A81F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Renewo;
+			};
+			name = Release;
+		};
+		779EDA314554F625B65A91D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = RenewoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		C9538F28F41EC36F2E5FA8B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Renewo.app/Renewo";
+				TEST_TARGET_NAME = Renewo;
+			};
+			name = Release;
+		};
+		CBB5371BD6A2BA11015B11F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Renewo.app/Renewo";
+				TEST_TARGET_NAME = Renewo;
+			};
+			name = Debug;
+		};
+		D243F9D5BAF1FAAA530242E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Renewo;
+			};
+			name = Debug;
+		};
+		D4DCC513D4654C340B67C01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB388DFA93EE3419300AED2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = RenewoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renewo.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		FFF3195F80135F3B92C07423 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DDD60132F96AA87E5A4BB15 /* Build configuration list for PBXNativeTarget "RenewoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBB5371BD6A2BA11015B11F5 /* Debug */,
+				C9538F28F41EC36F2E5FA8B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		497CB435FD98024353B7C60E /* Build configuration list for PBXNativeTarget "RenewoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D243F9D5BAF1FAAA530242E0 /* Debug */,
+				197CC897A50D18ABCE8A81F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7570CF1DCB92107C907CBEAC /* Build configuration list for PBXNativeTarget "Renewo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB388DFA93EE3419300AED2E /* Debug */,
+				779EDA314554F625B65A91D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DA209DA99098B260FF3AC1C9 /* Build configuration list for PBXProject "Renewo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4DCC513D4654C340B67C01F /* Debug */,
+				FFF3195F80135F3B92C07423 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C08E026D8B2BA8AD5E3B4ED /* Renewo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0C811CC109398B89B50333B /* Renewo.xcdatamodel */,
+			);
+			currentVersion = B0C811CC109398B89B50333B /* Renewo.xcdatamodel */;
+			path = Renewo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8A67639F74080F56C5AA328F /* Project object */;
+}

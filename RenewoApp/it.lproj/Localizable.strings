@@ -1,0 +1,115 @@
+"common.ok" = "OK";
+"common.untitled" = "Senza titolo";
+"common.placeholder" = "—";
+
+"main.title" = "Abbonamenti";
+"main.summary" = "Riepilogo";
+"main.settings" = "Impostazioni";
+"main.add" = "Aggiungi abbonamento";
+"main.delete.error.title" = "Impossibile eliminare";
+"main.delete.error.message" = "Impossibile eliminare l’abbonamento.";
+"main.empty.title" = "Nessun abbonamento ancora";
+"main.empty.subtitle" = "Aggiungi il tuo primo abbonamento per tracciare rinnovi e totali.";
+
+"total.monthly.title" = "Totale mensile";
+"total.yearly.title" = "Totale annuale";
+"total.noSubscriptions" = "Nessun abbonamento";
+
+"accessibility.total.monthly" = "Totale mensile";
+"accessibility.total.yearly" = "Totale annuale";
+"accessibility.row.format" = "%@, rinnova il %@, %@";
+"accessibility.row.unknownDate" = "Data di rinnovo sconosciuta";
+
+"add.title.add" = "Aggiungi abbonamento";
+"add.title.edit" = "Modifica abbonamento";
+"add.section.details" = "Dettagli";
+"add.section.reminders" = "Promemoria";
+"add.section.category" = "Categoria";
+"add.field.name" = "Nome";
+"add.field.amount" = "Importo";
+"add.field.currency" = "Valuta";
+"add.field.billingCycle" = "Ciclo di fatturazione";
+"add.field.renewalDate" = "Data di rinnovo";
+"add.field.category" = "Categoria";
+"add.reminder.pro.format" = "Ricorda %d giorni prima";
+"add.reminder.free.label" = "Giorni di promemoria";
+"add.reminder.free.value" = "%d giorni (Gratis)";
+"add.save" = "Salva";
+"add.cancel" = "Annulla";
+"add.alert.title" = "Impossibile salvare";
+"add.alert.generic" = "Qualcosa è andato storto. Riprova.";
+
+"validation.nameRequired" = "Il nome è obbligatorio.";
+"validation.amountPositive" = "L’importo deve essere maggiore di zero.";
+"validation.currencyRequired" = "La valuta è obbligatoria.";
+
+"billing.weekly" = "Settimanale";
+"billing.monthly" = "Mensile";
+"billing.yearly" = "Annuale";
+
+"summary.title" = "Riepilogo";
+"summary.section.monthly" = "Mensile";
+"summary.section.yearly" = "Annuale";
+
+"settings.title" = "Impostazioni";
+"settings.section.preferences" = "Preferenze";
+"settings.section.notifications" = "Notifiche";
+"settings.section.data" = "Dati";
+"settings.section.pro" = "Pro";
+"settings.defaultCurrency" = "Valuta predefinita";
+"settings.defaultReminder.pro.format" = "Promemoria predefinito: %d giorni";
+"settings.defaultReminder.free.label" = "Promemoria predefinito";
+"settings.defaultReminder.free.value" = "3 giorni (Pro per personalizzare)";
+"settings.notifications.title" = "Notifiche";
+"settings.notifications.openSettings" = "Apri impostazioni";
+"settings.notifications.status.allowed" = "Consentite";
+"settings.notifications.status.denied" = "Negate";
+"settings.notifications.status.notRequested" = "Non richieste";
+"settings.notifications.status.unknown" = "Sconosciuto";
+"settings.pro.unlocked" = "Pro sbloccato";
+"settings.pro.upgrade" = "Passa a Pro";
+"settings.pro.restore" = "Ripristina acquisti";
+"settings.export.csv" = "Esporta CSV";
+"settings.export.locked" = "Richiede Pro";
+"settings.alert.title" = "Impossibile completare";
+"settings.error.restore" = "Impossibile ripristinare gli acquisti.";
+"settings.error.export" = "Impossibile esportare il CSV.";
+
+"upgrade.pro.title" = "Passa a Pro";
+"upgrade.pro.unlimited" = "Abbonamenti illimitati";
+"upgrade.pro.categories" = "Categorie";
+"upgrade.pro.customReminders" = "Promemoria personalizzati";
+"upgrade.pro.csv" = "Esportazione CSV";
+"upgrade.pro.purchase" = "Acquista";
+"upgrade.pro.restore" = "Ripristina acquisti";
+"upgrade.pro.navTitle" = "Pro";
+"upgrade.pro.close" = "Chiudi";
+"upgrade.pro.error.purchase" = "Acquisto non riuscito. Riprova.";
+"upgrade.pro.error.restore" = "Ripristino non riuscito. Riprova.";
+
+"upgrade.limit.title" = "Passa a Pro";
+"upgrade.limit.message" = "Hai raggiunto il limite gratuito. Passa a Pro per aggiungere altri abbonamenti e sbloccare le funzioni Pro.";
+"upgrade.limit.notNow" = "Non ora";
+"upgrade.limit.navTitle" = "Aggiorna";
+
+"notifications.renewal.body" = "Si rinnova il %@.";
+
+"repo.error.missingEntity" = "Entità Subscription mancante.";
+"repo.error.invalidBillingCycle" = "Ciclo di fatturazione non valido.";
+"repo.error.missingRenewalDate" = "Data di rinnovo mancante.";
+"repo.error.missingId" = "ID abbonamento mancante.";
+"repo.error.missingName" = "Nome abbonamento mancante.";
+"repo.error.reminderNegative" = "I giorni di promemoria non possono essere negativi.";
+"repo.error.reminderTooLarge" = "I giorni di promemoria sono troppo alti.";
+
+"upgrade.pro.processing.purchase" = "Acquisto in corso...";
+"upgrade.pro.processing.restore" = "Ripristino in corso...";
+"upgrade.pro.error.notFound" = "Prodotto non disponibile. Riprova.";
+"upgrade.pro.error.unverified" = "Impossibile verificare l'acquisto.";
+"upgrade.pro.error.cancelled" = "Acquisto annullato.";
+"upgrade.pro.error.pending" = "L'acquisto è in attesa di approvazione.";
+"upgrade.pro.error.unknown" = "Si è verificato un errore. Riprova.";
+"settings.pro.status.title" = "Stato";
+"settings.pro.status.pro" = "Pro";
+"settings.pro.status.free" = "Gratis";
+"settings.pro.restore.processing" = "Ripristino in corso...";

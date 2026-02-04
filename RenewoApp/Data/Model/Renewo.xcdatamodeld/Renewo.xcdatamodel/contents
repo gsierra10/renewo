@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
+    <entity name="Subscription" representedClassName="Subscription" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="NO" attributeType="String"/>
+        <attribute name="amount" optional="NO" attributeType="Decimal" usesScalarValueType="NO"/>
+        <attribute name="currencyCode" optional="NO" attributeType="String"/>
+        <attribute name="billingCycleRaw" optional="NO" attributeType="String"/>
+        <attribute name="renewalDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="reminderDays" optional="NO" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="Subscription" positionX="-63" positionY="-18" width="128" height="184"/>
+    </elements>
+</model>

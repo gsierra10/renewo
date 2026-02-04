@@ -1,0 +1,115 @@
+"common.ok" = "OK";
+"common.untitled" = "Untitled";
+"common.placeholder" = "—";
+
+"main.title" = "Subscriptions";
+"main.summary" = "Summary";
+"main.settings" = "Settings";
+"main.add" = "Add Subscription";
+"main.delete.error.title" = "Unable to Delete";
+"main.delete.error.message" = "Unable to delete subscription.";
+"main.empty.title" = "No subscriptions yet";
+"main.empty.subtitle" = "Add your first subscription to track renewals and totals.";
+
+"total.monthly.title" = "Monthly Total";
+"total.yearly.title" = "Yearly Total";
+"total.noSubscriptions" = "No subscriptions";
+
+"accessibility.total.monthly" = "Monthly total";
+"accessibility.total.yearly" = "Yearly total";
+"accessibility.row.format" = "%@, renews %@, %@";
+"accessibility.row.unknownDate" = "Unknown renewal date";
+
+"add.title.add" = "Add Subscription";
+"add.title.edit" = "Edit Subscription";
+"add.section.details" = "Details";
+"add.section.reminders" = "Reminders";
+"add.section.category" = "Category";
+"add.field.name" = "Name";
+"add.field.amount" = "Amount";
+"add.field.currency" = "Currency";
+"add.field.billingCycle" = "Billing Cycle";
+"add.field.renewalDate" = "Renewal Date";
+"add.field.category" = "Category";
+"add.reminder.pro.format" = "Remind %d days before";
+"add.reminder.free.label" = "Reminder Days";
+"add.reminder.free.value" = "%d days (Free)";
+"add.save" = "Save";
+"add.cancel" = "Cancel";
+"add.alert.title" = "Unable to Save";
+"add.alert.generic" = "Something went wrong. Please try again.";
+
+"validation.nameRequired" = "Name is required.";
+"validation.amountPositive" = "Amount must be greater than zero.";
+"validation.currencyRequired" = "Currency is required.";
+
+"billing.weekly" = "Weekly";
+"billing.monthly" = "Monthly";
+"billing.yearly" = "Yearly";
+
+"summary.title" = "Summary";
+"summary.section.monthly" = "Monthly";
+"summary.section.yearly" = "Yearly";
+
+"settings.title" = "Settings";
+"settings.section.preferences" = "Preferences";
+"settings.section.notifications" = "Notifications";
+"settings.section.data" = "Data";
+"settings.section.pro" = "Pro";
+"settings.defaultCurrency" = "Default Currency";
+"settings.defaultReminder.pro.format" = "Default reminder: %d days";
+"settings.defaultReminder.free.label" = "Default reminder";
+"settings.defaultReminder.free.value" = "3 days (Pro to customize)";
+"settings.notifications.title" = "Notifications";
+"settings.notifications.openSettings" = "Open Settings";
+"settings.notifications.status.allowed" = "Allowed";
+"settings.notifications.status.denied" = "Denied";
+"settings.notifications.status.notRequested" = "Not requested";
+"settings.notifications.status.unknown" = "Unknown";
+"settings.pro.unlocked" = "Pro unlocked";
+"settings.pro.upgrade" = "Upgrade to Pro";
+"settings.pro.restore" = "Restore Purchases";
+"settings.export.csv" = "Export CSV";
+"settings.export.locked" = "Pro required";
+"settings.alert.title" = "Unable to Complete";
+"settings.error.restore" = "Unable to restore purchases.";
+"settings.error.export" = "Unable to export CSV.";
+
+"upgrade.pro.title" = "Upgrade to Pro";
+"upgrade.pro.unlimited" = "Unlimited subscriptions";
+"upgrade.pro.categories" = "Categories";
+"upgrade.pro.customReminders" = "Custom reminders";
+"upgrade.pro.csv" = "CSV export";
+"upgrade.pro.purchase" = "Purchase";
+"upgrade.pro.restore" = "Restore Purchases";
+"upgrade.pro.navTitle" = "Pro";
+"upgrade.pro.close" = "Close";
+"upgrade.pro.error.purchase" = "Purchase failed. Please try again.";
+"upgrade.pro.error.restore" = "Restore failed. Please try again.";
+
+"upgrade.limit.title" = "Upgrade to Pro";
+"upgrade.limit.message" = "You've reached the free limit. Upgrade to add more subscriptions and unlock Pro features.";
+"upgrade.limit.notNow" = "Not Now";
+"upgrade.limit.navTitle" = "Upgrade";
+
+"notifications.renewal.body" = "Renews on %@.";
+
+"repo.error.missingEntity" = "Missing Subscription entity.";
+"repo.error.invalidBillingCycle" = "Invalid billing cycle.";
+"repo.error.missingRenewalDate" = "Missing renewal date.";
+"repo.error.missingId" = "Missing subscription id.";
+"repo.error.missingName" = "Missing subscription name.";
+"repo.error.reminderNegative" = "Reminder days must be non-negative.";
+"repo.error.reminderTooLarge" = "Reminder days is too large.";
+
+"upgrade.pro.processing.purchase" = "Purchasing...";
+"upgrade.pro.processing.restore" = "Restoring...";
+"upgrade.pro.error.notFound" = "Product not available. Please try again.";
+"upgrade.pro.error.unverified" = "Purchase could not be verified.";
+"upgrade.pro.error.cancelled" = "Purchase cancelled.";
+"upgrade.pro.error.pending" = "Purchase is pending approval.";
+"upgrade.pro.error.unknown" = "Something went wrong. Please try again.";
+"settings.pro.status.title" = "Status";
+"settings.pro.status.pro" = "Pro";
+"settings.pro.status.free" = "Free";
+"settings.pro.restore.processing" = "Restoring...";
