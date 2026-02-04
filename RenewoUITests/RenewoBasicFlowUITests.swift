@@ -45,7 +45,7 @@ final class RenewoBasicFlowUITests: XCTestCase {
         XCTAssertTrue(updatedCell.waitForExistence(timeout: 3))
 
         updatedCell.swipeLeft()
-        let deleteButton = app.buttons["Delete"]
+        let deleteButton = app.buttons.matching(NSPredicate(format: "label IN %@", Self.deleteButtonLabels)).firstMatch
         XCTAssertTrue(deleteButton.waitForExistence(timeout: 2))
         deleteButton.tap()
 
@@ -106,4 +106,12 @@ final class RenewoBasicFlowUITests: XCTestCase {
         let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: existingValue.count)
         element.typeText(deleteString + value)
     }
+
+    private static let deleteButtonLabels = [
+        "Delete",   // English
+        "Eliminar", // Spanish
+        "Löschen",  // German
+        "Supprimer", // French
+        "Elimina",  // Italian
+    ]
 }
