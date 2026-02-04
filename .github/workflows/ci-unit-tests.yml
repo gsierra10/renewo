@@ -1,0 +1,72 @@
+name: CI Unit Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  unit-tests:
+    runs-on: macos-14
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select latest stable Xcode
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          xcode_app="$(find /Applications -maxdepth 1 -type d -name 'Xcode*.app' | grep -viE 'beta|rc' | sort -V | tail -n 1 || true)"
+          if [[ -z "${xcode_app}" ]]; then
+            xcode_app="/Applications/Xcode.app"
+          fi
+
+          sudo xcode-select -s "${xcode_app}/Contents/Developer"
+          xcodebuild -version
+
+      - name: Resolve Swift package dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project Renewo.xcodeproj \
+            -scheme Renewo \
+            -resolvePackageDependencies
+
+      - name: Run unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p TestResults
+
+          if command -v xcpretty >/dev/null 2>&1; then
+            xcodebuild \
+              -project Renewo.xcodeproj \
+              -scheme Renewo \
+              -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" \
+              -only-testing:RenewoTests \
+              -resultBundlePath TestResults/UnitTests.xcresult \
+              test | xcpretty
+          else
+            xcodebuild \
+              -project Renewo.xcodeproj \
+              -scheme Renewo \
+              -destination "platform=iOS Simulator,name=iPhone 15,OS=latest" \
+              -only-testing:RenewoTests \
+              -resultBundlePath TestResults/UnitTests.xcresult \
+              test
+          fi
+
+      - name: Upload unit test result bundle on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-tests-xcresult
+          path: TestResults/UnitTests.xcresult
+          retention-days: 7
+          if-no-files-found: warn
