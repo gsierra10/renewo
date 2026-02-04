@@ -90,25 +90,41 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p TestResults
+          destination="${{ steps.simulator.outputs.destination }}"
+          log_path="TestResults/ui-tests.log"
+          max_attempts=2
+          attempt=1
 
-          if command -v xcpretty >/dev/null 2>&1; then
+          while true; do
+            echo "UI test attempt ${attempt}/${max_attempts}"
+            rm -rf TestResults/UITests.xcresult
+
+            set +e
             xcodebuild \
               -project Renewo.xcodeproj \
               -scheme Renewo \
-              -destination "${{ steps.simulator.outputs.destination }}" \
-              -only-testing:RenewoUITests \
-              -resultBundlePath TestResults/UITests.xcresult \
-              test | xcpretty
-          else
-            xcodebuild \
-              -project Renewo.xcodeproj \
-              -scheme Renewo \
-              -destination "${{ steps.simulator.outputs.destination }}" \
+              -destination "${destination}" \
               -only-testing:RenewoUITests \
               -resultBundlePath TestResults/UITests.xcresult \
               -quiet \
-              test
-          fi
+              test 2>&1 | tee "${log_path}"
+            status=${PIPESTATUS[0]}
+            set -e
+
+            if [[ "${status}" -eq 0 ]]; then
+              break
+            fi
+
+            if [[ "${attempt}" -lt "${max_attempts}" ]] && grep -q "Test runner never began executing tests after launching" "${log_path}"; then
+              echo "Detected transient test runner launch failure. Retrying once."
+              xcrun simctl shutdown all || true
+              sleep 5
+              attempt=$((attempt + 1))
+              continue
+            fi
+
+            exit "${status}"
+          done
 
       - name: Upload UI test results on failure
         if: failure()
