@@ -6,6 +6,21 @@ struct TotalCardView: View {
     let formatter: CurrencyFormatter
     let title: String
     let accessibilityLabel: String
+    let amountAccessibilityIdentifier: String?
+
+    init(
+        totals: [String: Decimal],
+        formatter: CurrencyFormatter,
+        title: String,
+        accessibilityLabel: String,
+        amountAccessibilityIdentifier: String? = nil
+    ) {
+        self.totals = totals
+        self.formatter = formatter
+        self.title = title
+        self.accessibilityLabel = accessibilityLabel
+        self.amountAccessibilityIdentifier = amountAccessibilityIdentifier
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -14,15 +29,31 @@ struct TotalCardView: View {
                 .foregroundColor(.secondary)
 
             if totals.isEmpty {
-                Text(L10n.tr("common.placeholder"))
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.primary)
+                if let amountAccessibilityIdentifier {
+                    Text(L10n.tr("common.placeholder"))
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.primary)
+                        .accessibilityIdentifier(amountAccessibilityIdentifier)
+                } else {
+                    Text(L10n.tr("common.placeholder"))
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.primary)
+                }
             } else if totals.count == 1, let code = totals.keys.first, let amount = totals[code] {
-                Text(formatter.string(from: amount, currencyCode: code))
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.primary)
-                    .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
+                if let amountAccessibilityIdentifier {
+                    Text(formatter.string(from: amount, currencyCode: code))
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.primary)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier(amountAccessibilityIdentifier)
+                } else {
+                    Text(formatter.string(from: amount, currencyCode: code))
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundColor(.primary)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             } else {
                 VStack(alignment: .leading, spacing: 6) {
                     ForEach(sortedTotals, id: \.code) { entry in

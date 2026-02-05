@@ -18,7 +18,7 @@
 
 "accessibility.total.monthly" = "Gesamt für diesen Monat";
 "accessibility.total.yearly" = "Jährliche Summe";
-"accessibility.row.format" = "%@, verlängert am %@, %@";
+"accessibility.row.format" = "%@, Erneuert am %@, %@";
 "accessibility.row.unknownDate" = "Unbekanntes Verlängerungsdatum";
 
 "add.title.add" = "Abo hinzufügen";

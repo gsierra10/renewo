@@ -33,6 +33,7 @@ struct SubscriptionRowView: View {
         .padding(.vertical, 6)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityLabel)
+        .accessibilityIdentifier("subscriptionRow")
     }
 
     private var amountText: String {

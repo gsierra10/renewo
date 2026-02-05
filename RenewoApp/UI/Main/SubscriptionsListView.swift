@@ -35,7 +35,8 @@ struct SubscriptionsListView: View {
                 totals: monthlyTotals,
                 formatter: currencyFormatter,
                 title: L10n.tr("total.monthly.thisMonth"),
-                accessibilityLabel: L10n.tr("accessibility.total.monthly")
+                accessibilityLabel: L10n.tr("total.monthly.thisMonth"),
+                amountAccessibilityIdentifier: "monthlyTotalAmountLabel"
             )
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 8, trailing: 16))

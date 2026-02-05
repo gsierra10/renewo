@@ -20,7 +20,8 @@ struct SummaryView: View {
                     totals: monthlyTotals,
                     formatter: formatter,
                     title: L10n.tr("total.monthly.thisMonth"),
-                    accessibilityLabel: L10n.tr("accessibility.total.monthly")
+                    accessibilityLabel: L10n.tr("total.monthly.thisMonth"),
+                    amountAccessibilityIdentifier: "summaryMonthlyTotalAmountLabel"
                 )
             } header: {
                 Text(L10n.tr("summary.section.monthly"))
@@ -31,7 +32,8 @@ struct SummaryView: View {
                     totals: yearlyTotals,
                     formatter: formatter,
                     title: L10n.tr("total.yearly.title"),
-                    accessibilityLabel: L10n.tr("accessibility.total.yearly")
+                    accessibilityLabel: L10n.tr("total.yearly.title"),
+                    amountAccessibilityIdentifier: "summaryYearlyTotalAmountLabel"
                 )
             } header: {
                 Text(L10n.tr("summary.section.yearly"))
