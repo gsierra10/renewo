@@ -326,7 +326,7 @@ final class SubscriptionsRepository {
         }
     }
 
-    private func subscriptionCount() throws -> Int {
+    func subscriptionCount() throws -> Int {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Subscription")
         let count = try context.count(for: request)
         return count == NSNotFound ? 0 : count

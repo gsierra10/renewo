@@ -41,6 +41,9 @@
 "add.alert.title" = "Unable to Save";
 "add.alert.generic" = "Something went wrong. Please try again.";
 
+"firstAdd.title" = "You're set";
+"firstAdd.message" = "We'll remind you before it renews.";
+
 "validation.nameRequired" = "Name is required.";
 "validation.amountPositive" = "Amount must be greater than zero.";
 "validation.currencyRequired" = "Currency is required.";

@@ -41,6 +41,9 @@
 "add.alert.title" = "No se puede guardar";
 "add.alert.generic" = "Algo salió mal. Inténtalo de nuevo.";
 
+"firstAdd.title" = "Todo listo";
+"firstAdd.message" = "Te avisaremos antes de que se renueve.";
+
 "validation.nameRequired" = "El nombre es obligatorio.";
 "validation.amountPositive" = "El importe debe ser mayor que cero.";
 "validation.currencyRequired" = "La moneda es obligatoria.";

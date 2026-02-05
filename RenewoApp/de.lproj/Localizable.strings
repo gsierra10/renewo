@@ -41,6 +41,9 @@
 "add.alert.title" = "Speichern nicht möglich";
 "add.alert.generic" = "Etwas ist schiefgelaufen. Bitte versuche es erneut.";
 
+"firstAdd.title" = "Alles bereit";
+"firstAdd.message" = "Wir erinnern dich, bevor es sich erneuert.";
+
 "validation.nameRequired" = "Name ist erforderlich.";
 "validation.amountPositive" = "Der Betrag muss größer als null sein.";
 "validation.currencyRequired" = "Währung ist erforderlich.";

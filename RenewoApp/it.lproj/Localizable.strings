@@ -41,6 +41,9 @@
 "add.alert.title" = "Impossibile salvare";
 "add.alert.generic" = "Qualcosa è andato storto. Riprova.";
 
+"firstAdd.title" = "Tutto pronto";
+"firstAdd.message" = "Ti avviseremo prima del rinnovo.";
+
 "validation.nameRequired" = "Il nome è obbligatorio.";
 "validation.amountPositive" = "L’importo deve essere maggiore di zero.";
 "validation.currencyRequired" = "La valuta è obbligatoria.";

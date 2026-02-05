@@ -5,12 +5,20 @@ final class SettingsStore {
         static let defaultCurrencyCode = "defaultCurrencyCode"
         static let defaultReminderDays = "defaultReminderDays"
         static let hasSeenNotificationPrompt = "hasSeenNotificationPrompt"
+        static let hasShownFirstAddConfirmation = "hasShownFirstAddConfirmation"
     }
 
     private let defaults: UserDefaults
 
     init(defaults: UserDefaults = .standard) {
-        self.defaults = defaults
+        if LaunchArguments.isUITestMode,
+           defaults === UserDefaults.standard,
+           let suiteName = LaunchArguments.value(prefix: "UI_TEST_DEFAULTS="),
+           let suiteDefaults = UserDefaults(suiteName: suiteName) {
+            self.defaults = suiteDefaults
+        } else {
+            self.defaults = defaults
+        }
     }
 
     var defaultCurrencyCode: String {
@@ -29,5 +37,10 @@ final class SettingsStore {
     var hasSeenNotificationPrompt: Bool {
         get { defaults.object(forKey: Keys.hasSeenNotificationPrompt) as? Bool ?? false }
         set { defaults.set(newValue, forKey: Keys.hasSeenNotificationPrompt) }
+    }
+
+    var hasShownFirstAddConfirmation: Bool {
+        get { defaults.object(forKey: Keys.hasShownFirstAddConfirmation) as? Bool ?? false }
+        set { defaults.set(newValue, forKey: Keys.hasShownFirstAddConfirmation) }
     }
 }

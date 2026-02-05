@@ -21,6 +21,7 @@ struct AddEditSubscriptionView: View {
     @State private var errorMessage: String?
     @State private var isSaving = false
     @State private var showUpgradeSheet = false
+    @State private var showFirstAddConfirmation = false
 
     init(
         entitlementsStore: EntitlementsStore,
@@ -122,6 +123,13 @@ struct AddEditSubscriptionView: View {
             } message: {
                 Text(errorMessage ?? "")
             }
+            .alert(L10n.tr("firstAdd.title"), isPresented: $showFirstAddConfirmation) {
+                Button(L10n.tr("common.ok"), role: .cancel) {
+                    dismiss()
+                }
+            } message: {
+                Text(L10n.tr("firstAdd.message"))
+            }
             .sheet(isPresented: $showUpgradeSheet) {
                 UpgradeSheetView()
             }
@@ -162,6 +170,8 @@ struct AddEditSubscriptionView: View {
             do {
                 switch mode {
                 case .add:
+                    let shouldShowFirstAdd = (try? repository.subscriptionCount()) == 0
+                        && !settingsStore.hasShownFirstAddConfirmation
                     let repositoryDraft = SubscriptionsRepository.SubscriptionDraft(
                         name: trimmedName,
                         amount: amount,
@@ -172,7 +182,12 @@ struct AddEditSubscriptionView: View {
                         category: entitlementsStore.isPro ? trimmedCategory : nil
                     )
                     try repository.add(repositoryDraft, isPro: entitlementsStore.isPro)
-                    dismiss()
+                    if shouldShowFirstAdd {
+                        settingsStore.hasShownFirstAddConfirmation = true
+                        showFirstAddConfirmation = true
+                    } else {
+                        dismiss()
+                    }
                 case .edit(let subscription):
                     let changes = SubscriptionsRepository.SubscriptionChanges(
                         name: trimmedName,

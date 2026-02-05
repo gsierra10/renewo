@@ -41,6 +41,9 @@
 "add.alert.title" = "Enregistrement impossible";
 "add.alert.generic" = "Une erreur est survenue. Veuillez réessayer.";
 
+"firstAdd.title" = "Tout est prêt";
+"firstAdd.message" = "Nous vous préviendrons avant le renouvellement.";
+
 "validation.nameRequired" = "Le nom est obligatoire.";
 "validation.amountPositive" = "Le montant doit être supérieur à zéro.";
 "validation.currencyRequired" = "La devise est obligatoire.";
