@@ -1,0 +1,16 @@
+only_rules:
+  - force_cast
+  - force_try
+  - duplicate_imports
+  - unused_import
+  - redundant_optional_initialization
+  - redundant_nil_coalescing
+
+excluded:
+  - .git
+  - DerivedData
+  - Build
+  - build
+  - BuildResults
+  - TestResults
+  - fastlane
