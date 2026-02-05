@@ -1,0 +1,41 @@
+name: Release TestFlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version number (optional)"
+        required: false
+        type: string
+      build_number:
+        description: "Build number (optional)"
+        required: false
+        type: string
+
+jobs:
+  release:
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Fastlane
+        run: sudo gem install fastlane -N
+
+      - name: Upload to TestFlight
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+
+          args=()
+          if [[ -n "${{ inputs.version }}" ]]; then
+            args+=("version:${{ inputs.version }}")
+          fi
+          if [[ -n "${{ inputs.build_number }}" ]]; then
+            args+=("build_number:${{ inputs.build_number }}")
+          fi
+
+          fastlane testflight "${args[@]}"

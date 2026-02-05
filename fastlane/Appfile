@@ -1,0 +1,3 @@
+app_identifier("com.renewo.app")
+# apple_id("you@example.com")
+team_id("YOUR_TEAM_ID")
