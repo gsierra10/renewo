@@ -8,14 +8,15 @@
 "main.add" = "Aggiungi abbonamento";
 "main.delete.error.title" = "Impossibile eliminare";
 "main.delete.error.message" = "Impossibile eliminare l’abbonamento.";
-"main.empty.title" = "Nessun abbonamento ancora";
-"main.empty.subtitle" = "Aggiungi il tuo primo abbonamento per tracciare rinnovi e totali.";
+"main.empty.title" = "Aggiungi la tua prima sottoscrizione per anticipare i rinnovi.";
+"main.empty.subtitle" = "Ti avviseremo prima del rinnovo.";
 
 "total.monthly.title" = "Totale mensile";
+"total.monthly.thisMonth" = "Questo mese";
 "total.yearly.title" = "Totale annuale";
 "total.noSubscriptions" = "Nessun abbonamento";
 
-"accessibility.total.monthly" = "Totale mensile";
+"accessibility.total.monthly" = "Totale di questo mese";
 "accessibility.total.yearly" = "Totale annuale";
 "accessibility.row.format" = "%@, rinnova il %@, %@";
 "accessibility.row.unknownDate" = "Data di rinnovo sconosciuta";
@@ -30,6 +31,7 @@
 "add.field.currency" = "Valuta";
 "add.field.billingCycle" = "Ciclo di fatturazione";
 "add.field.renewalDate" = "Data di rinnovo";
+"add.field.renewsOn" = "Si rinnova il";
 "add.field.category" = "Categoria";
 "add.reminder.pro.format" = "Ricorda %d giorni prima";
 "add.reminder.free.label" = "Giorni di promemoria";
@@ -67,7 +69,7 @@
 "settings.notifications.status.notRequested" = "Non richieste";
 "settings.notifications.status.unknown" = "Sconosciuto";
 "settings.pro.unlocked" = "Pro sbloccato";
-"settings.pro.upgrade" = "Passa a Pro";
+"settings.pro.upgrade" = "Vedi vantaggi Pro";
 "settings.pro.restore" = "Ripristina acquisti";
 "settings.export.csv" = "Esporta CSV";
 "settings.export.locked" = "Richiede Pro";

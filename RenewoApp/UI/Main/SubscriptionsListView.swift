@@ -34,7 +34,7 @@ struct SubscriptionsListView: View {
             TotalCardView(
                 totals: monthlyTotals,
                 formatter: currencyFormatter,
-                title: L10n.tr("total.monthly.title"),
+                title: L10n.tr("total.monthly.thisMonth"),
                 accessibilityLabel: L10n.tr("accessibility.total.monthly")
             )
                 .listRowSeparator(.hidden)
