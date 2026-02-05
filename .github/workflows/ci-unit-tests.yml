@@ -11,6 +11,9 @@ on:
 jobs:
   unit-tests:
     runs-on: macos-14
+    env:
+      MIN_COVERAGE: ""
+      UPLOAD_COVERAGE_ARTIFACT: "false"
 
     steps:
       - name: Check out repository
@@ -119,6 +122,7 @@ jobs:
               -scheme Renewo \
               -destination "${{ steps.simulator.outputs.destination }}" \
               -only-testing:RenewoTests \
+              -enableCodeCoverage YES \
               -resultBundlePath TestResults/UnitTests.xcresult \
               test | xcpretty
           else
@@ -127,12 +131,50 @@ jobs:
               -scheme Renewo \
               -destination "${{ steps.simulator.outputs.destination }}" \
               -only-testing:RenewoTests \
+              -enableCodeCoverage YES \
               -resultBundlePath TestResults/UnitTests.xcresult \
               test
           fi
 
+      - name: Generate coverage summary
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./scripts/coverage-summary.sh TestResults/UnitTests.xcresult | tee TestResults/coverage-summary.md
+
+      - name: Enforce coverage threshold
+        if: env.MIN_COVERAGE != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          coverage=$(awk -F': ' '/Overall line coverage:/ {gsub(/%/, "", $2); print $2}' TestResults/coverage-summary.md)
+          if [[ -z "$coverage" ]]; then
+            echo "ERROR: Unable to parse coverage summary." >&2
+            exit 1
+          fi
+
+          python3 - <<PY "$coverage" "$MIN_COVERAGE"
+import sys
+coverage = float(sys.argv[1])
+minimum = float(sys.argv[2])
+if coverage + 1e-9 < minimum:
+    raise SystemExit(f\"Coverage {coverage:.1f}% is below the required minimum {minimum:.1f}%\")
+print(f\"Coverage {coverage:.1f}% meets the minimum {minimum:.1f}%\")
+PY
+
       - name: Upload unit test result bundle on failure
         if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-tests-xcresult
+          path: TestResults/UnitTests.xcresult
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Upload unit test result bundle on success (optional)
+        if: success() && env.UPLOAD_COVERAGE_ARTIFACT == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: unit-tests-xcresult

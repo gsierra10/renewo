@@ -5,6 +5,7 @@
 - `CI Unit Tests` (`.github/workflows/ci-unit-tests.yml`)
   - Triggers: pull requests to `main`, pushes to `main`
   - Job/check name: `unit-tests`
+  - Produces a coverage summary from the unit test result bundle
 - `CI Build Release` (`.github/workflows/ci-build-release.yml`)
   - Triggers: pull requests to `main`, pushes to `main`
   - Job/check name: `build-release`
@@ -28,11 +29,20 @@ xcodebuild \
   -scheme Renewo \
   -destination "id=<SIMULATOR_UDID>" \
   -only-testing:RenewoTests \
+  -enableCodeCoverage YES \
   -resultBundlePath TestResults/UnitTests.xcresult \
   test
 ```
 
 The CI workflow dynamically selects an available simulator UDID before calling this command.
+
+### Coverage summary (same as CI)
+
+```bash
+./scripts/coverage-summary.sh TestResults/UnitTests.xcresult
+```
+
+To enforce a minimum coverage threshold in CI, set `MIN_COVERAGE` (percentage, e.g. `60`) in the workflow environment.
 
 ### 2) Release build (same as CI)
 
