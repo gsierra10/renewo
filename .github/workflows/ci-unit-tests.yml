@@ -155,16 +155,8 @@ jobs:
             exit 1
           fi
 
-          COVERAGE="$coverage" MIN_COVERAGE="$MIN_COVERAGE" python3 - <<'PY'
-import sys
-import os
-
-coverage = float(os.environ["COVERAGE"])
-minimum = float(os.environ["MIN_COVERAGE"])
-if coverage + 1e-9 < minimum:
-    raise SystemExit(f\"Coverage {coverage:.1f}% is below the required minimum {minimum:.1f}%\")
-print(f\"Coverage {coverage:.1f}% meets the minimum {minimum:.1f}%\")
-PY
+          COVERAGE="$coverage" MIN_COVERAGE="$MIN_COVERAGE" \
+            python3 -c "import os,sys; coverage=float(os.environ['COVERAGE']); minimum=float(os.environ['MIN_COVERAGE']); sys.exit(f'Coverage {coverage:.1f}% is below the required minimum {minimum:.1f}%') if coverage + 1e-9 < minimum else print(f'Coverage {coverage:.1f}% meets the minimum {minimum:.1f}%')"
 
       - name: Upload unit test result bundle on failure
         if: failure()
