@@ -6,31 +6,26 @@ struct SubscriptionRowView: View {
     let formatter: CurrencyFormatter
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
+        HStack(alignment: .top, spacing: .renewoM) {
+            VStack(alignment: .leading, spacing: .renewoXS) {
                 Text(subscription.name ?? L10n.tr("common.untitled"))
-                    .font(.headline)
-                    .foregroundColor(.primary)
+                    .font(.renewoBody)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.renewoTextPrimary)
 
-                if let renewalDate = subscription.renewalDate {
-                    Text(Self.dateFormatter.string(from: renewalDate))
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                } else {
-                    Text(L10n.tr("common.placeholder"))
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
+                Text(renewalText)
+                    .font(.renewoCaption)
+                    .foregroundColor(.renewoTextSecondary)
             }
 
-            Spacer(minLength: 12)
+            Spacer(minLength: .renewoS)
 
             Text(amountText)
-                .font(.headline)
-                .foregroundColor(.primary)
+                .font(.renewoSectionHeader)
+                .foregroundColor(.renewoTextPrimary)
                 .multilineTextAlignment(.trailing)
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, .renewoS)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityLabel)
         .accessibilityIdentifier("subscriptionRow")
@@ -56,5 +51,12 @@ struct SubscriptionRowView: View {
         let renewalText = subscription.renewalDate.map { Self.dateFormatter.string(from: $0) }
             ?? L10n.tr("accessibility.row.unknownDate")
         return L10n.tr("accessibility.row.format", name, renewalText, amountText)
+    }
+
+    private var renewalText: String {
+        guard let renewalDate = subscription.renewalDate else {
+            return L10n.tr("list.renewsOn.unknown")
+        }
+        return L10n.tr("list.renewsOn.format", Self.dateFormatter.string(from: renewalDate))
     }
 }

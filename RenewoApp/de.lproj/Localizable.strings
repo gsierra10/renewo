@@ -11,6 +11,9 @@
 "main.empty.title" = "Füge dein erstes Abo hinzu, um Erneuerungen voraus zu sein.";
 "main.empty.subtitle" = "Wir erinnern dich, bevor es sich erneuert.";
 
+"list.renewsOn.format" = "Erneuert am %@";
+"list.renewsOn.unknown" = "Erneuert am —";
+
 "total.monthly.title" = "Monatliche Summe";
 "total.monthly.thisMonth" = "Diesen Monat";
 "total.yearly.title" = "Jährliche Summe";
