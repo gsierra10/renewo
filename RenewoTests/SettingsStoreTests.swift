@@ -27,18 +27,21 @@ final class SettingsStoreTests: XCTestCase {
         XCTAssertEqual(store.defaultCurrencyCode, "EUR")
         XCTAssertEqual(store.defaultReminderDays, 3)
         XCTAssertEqual(store.hasSeenNotificationPrompt, false)
+        XCTAssertEqual(store.hasShownFirstAddConfirmation, false)
     }
 
     func testValuesPersist() {
         store.defaultCurrencyCode = "USD"
         store.defaultReminderDays = 7
         store.hasSeenNotificationPrompt = true
+        store.hasShownFirstAddConfirmation = true
 
         let reloaded = SettingsStore(defaults: defaults)
 
         XCTAssertEqual(reloaded.defaultCurrencyCode, "USD")
         XCTAssertEqual(reloaded.defaultReminderDays, 7)
         XCTAssertEqual(reloaded.hasSeenNotificationPrompt, true)
+        XCTAssertEqual(reloaded.hasShownFirstAddConfirmation, true)
     }
 }
 
