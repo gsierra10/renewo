@@ -22,8 +22,14 @@ struct SummaryView: View {
                     title: L10n.tr("total.monthly.title"),
                     accessibilityLabel: L10n.tr("accessibility.total.monthly")
                 )
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets(top: .renewoS, leading: .renewoM, bottom: .renewoM, trailing: .renewoM))
+                .listRowBackground(Color.clear)
             } header: {
                 Text(L10n.tr("summary.section.monthly"))
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
+                    .textCase(nil)
             }
 
             Section {
@@ -33,11 +39,19 @@ struct SummaryView: View {
                     title: L10n.tr("total.yearly.title"),
                     accessibilityLabel: L10n.tr("accessibility.total.yearly")
                 )
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets(top: .renewoS, leading: .renewoM, bottom: .renewoM, trailing: .renewoM))
+                .listRowBackground(Color.clear)
             } header: {
                 Text(L10n.tr("summary.section.yearly"))
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
+                    .textCase(nil)
             }
         }
-        .listStyle(.insetGrouped)
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(Color.renewoBackground)
         .navigationTitle(L10n.tr("summary.title"))
     }
 
