@@ -18,7 +18,7 @@
 
 "accessibility.total.monthly" = "Total de este mes";
 "accessibility.total.yearly" = "Total anual";
-"accessibility.row.format" = "%@, renueva el %@, %@";
+"accessibility.row.format" = "%@, Renueva el %@, %@";
 "accessibility.row.unknownDate" = "Fecha de renovación desconocida";
 
 "add.title.add" = "Añadir suscripción";
