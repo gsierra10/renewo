@@ -13,9 +13,16 @@ if [[ ! -d "$xcresult_path" ]]; then
   exit 1
 fi
 
-report_json=$(xcrun xccov view --report --json "$xcresult_path")
+report_json="$(xcrun xccov view --report --json "$xcresult_path" 2> /tmp/xccov.err || true)"
+if [[ -z "$report_json" ]]; then
+  echo "ERROR: xccov returned no coverage data." >&2
+  if [[ -s /tmp/xccov.err ]]; then
+    cat /tmp/xccov.err >&2
+  fi
+  exit 1
+fi
 
-printf '%s' "$report_json" | python3 - <<'PY'
+python3 - <<'PY' <<<"$report_json"
 import json
 import sys
 
