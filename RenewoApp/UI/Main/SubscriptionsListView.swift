@@ -63,6 +63,8 @@ struct SubscriptionsListView: View {
             }
         }
         .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(Color.renewoBackground)
         .navigationTitle(L10n.tr("main.title"))
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarLeading) {

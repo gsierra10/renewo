@@ -4,8 +4,13 @@ struct RootView: View {
     @EnvironmentObject private var container: AppContainer
 
     var body: some View {
-        NavigationStack {
-            rootContent
+        ZStack {
+            Color.renewoBackground
+                .ignoresSafeArea()
+            NavigationStack {
+                rootContent
+            }
+            .tint(.renewoAccent)
         }
     }
 
