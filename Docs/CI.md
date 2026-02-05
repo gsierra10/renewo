@@ -12,6 +12,9 @@
   - Triggers: manual (`workflow_dispatch`) and weekly schedule
   - Job/check name: `ui-tests`
   - Intended as optional (not a required branch protection check)
+- `CI Lint` (`.github/workflows/ci-lint.yml`)
+  - Triggers: pull requests to `main`, pushes to `main`
+  - Job/check name: `swiftlint`
 
 ## Local CI-Equivalent Commands
 
@@ -59,6 +62,12 @@ xcodebuild \
 ```
 
 The CI workflow picks a simulator dynamically and retries once only when it detects a known transient launch issue: `Test runner never began executing tests after launching`.
+
+### 4) SwiftLint (same as CI)
+
+```bash
+swiftlint --strict
+```
 
 ## Branch Protection Guidance
 
