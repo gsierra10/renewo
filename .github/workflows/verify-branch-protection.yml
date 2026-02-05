@@ -1,0 +1,42 @@
+name: Verify Branch Protection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch branch protection
+        env:
+          GH_TOKEN: ${{ secrets.GH_ADMIN_TOKEN || github.token }}
+          OWNER_REPO: ${{ github.repository }}
+          BRANCH: main
+        run: |
+          set -euo pipefail
+
+          json=$(gh api -H "Accept: application/vnd.github+json" \
+            "repos/${OWNER_REPO}/branches/${BRANCH}/protection")
+
+          echo "$json" > /tmp/branch-protection.json
+          required=$(jq -r '.required_status_checks.contexts[]?' /tmp/branch-protection.json)
+
+          if ! echo "$required" | grep -qx "unit-tests"; then
+            echo "ERROR: required status checks missing 'unit-tests'." >&2
+            exit 1
+          fi
+
+          if ! echo "$required" | grep -qx "build-release"; then
+            echo "ERROR: required status checks missing 'build-release'." >&2
+            exit 1
+          fi
+
+          if echo "$required" | grep -qx "ui-tests"; then
+            echo "ERROR: 'ui-tests' must not be a required status check." >&2
+            exit 1
+          fi
+
+          echo "Branch protection required checks are correct."

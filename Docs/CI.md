@@ -73,3 +73,20 @@ Configure branch protection on `main` with these settings:
   - `build-release`
 - Do not require `ui-tests` (keep UI tests optional/manual).
 - Restrict force pushes (disable force-push to `main`).
+
+## Branch Protection Enforcement Script
+
+Use the scripted enforcement to apply the branch protection settings via GitHub CLI.
+
+Requirements:
+- `gh` authenticated with a token that has `repo` and `admin:repo_hook` permissions.
+- If `GITHUB_TOKEN` is insufficient for branch protection, use a dedicated admin token.
+
+Steps:
+1. `gh auth login`
+2. `export GH_TOKEN=...` (token with `repo` + `admin:repo_hook`)
+3. `./scripts/enforce-branch-protection.sh`
+
+Optional env vars:
+- `OWNER_REPO` (defaults to the current repo)
+- `BRANCH` (defaults to `main`)
