@@ -2,6 +2,9 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject private var container: AppContainer
+    #if DEBUG
+    @State private var isShowingPreviewGallery = false
+    #endif
 
     var body: some View {
         ZStack {
@@ -11,6 +14,16 @@ struct RootView: View {
                 rootContent
             }
             .tint(.renewoAccent)
+            #if DEBUG
+            .onLongPressGesture(minimumDuration: 1.2) {
+                isShowingPreviewGallery = true
+            }
+            .sheet(isPresented: $isShowingPreviewGallery) {
+                NavigationStack {
+                    PreviewGalleryView()
+                }
+            }
+            #endif
         }
     }
 
