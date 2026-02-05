@@ -38,7 +38,7 @@ struct SubscriptionsListView: View {
                 accessibilityLabel: L10n.tr("accessibility.total.monthly")
             )
                 .listRowSeparator(.hidden)
-                .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 8, trailing: 16))
+                .listRowInsets(EdgeInsets(top: .renewoM, leading: .renewoM, bottom: .renewoS, trailing: .renewoM))
                 .listRowBackground(Color.clear)
 
             if subscriptions.isEmpty {
