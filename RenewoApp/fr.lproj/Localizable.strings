@@ -11,6 +11,9 @@
 "main.empty.title" = "Ajoutez votre première souscription pour anticiper les renouvellements.";
 "main.empty.subtitle" = "Nous vous préviendrons avant le renouvellement.";
 
+"list.renewsOn.format" = "Renouvelle le %@";
+"list.renewsOn.unknown" = "Renouvelle le —";
+
 "total.monthly.title" = "Total mensuel";
 "total.monthly.thisMonth" = "Ce mois-ci";
 "total.yearly.title" = "Total annuel";

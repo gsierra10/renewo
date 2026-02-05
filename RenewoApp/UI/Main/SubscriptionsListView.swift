@@ -56,6 +56,7 @@ struct SubscriptionsListView: View {
                         formatter: currencyFormatter
                     )
                     .contentShape(Rectangle())
+                    .listRowSeparatorTint(.renewoDivider)
                     .onTapGesture {
                         selectedSubscription = SelectedSubscription(subscription: subscription)
                     }

@@ -11,6 +11,9 @@
 "main.empty.title" = "Add your first subscription to stay ahead of renewals.";
 "main.empty.subtitle" = "We'll remind you before it renews.";
 
+"list.renewsOn.format" = "Renews on %@";
+"list.renewsOn.unknown" = "Renews on —";
+
 "total.monthly.title" = "Monthly Total";
 "total.monthly.thisMonth" = "This month";
 "total.yearly.title" = "Yearly Total";
