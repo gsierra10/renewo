@@ -62,6 +62,9 @@ struct SettingsView: View {
                     .accessibilityIdentifier("settingsTitleLabel")
                 ExportCSVRow(isPro: entitlementsStore.isPro) {}
             }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(Color.renewoBackground)
             .accessibilityIdentifier("settingsViewRoot")
         } else {
             formContent
@@ -70,7 +73,7 @@ struct SettingsView: View {
 
     private var formContent: some View {
         Form {
-            Section(L10n.tr("settings.section.preferences")) {
+            Section {
                 Picker(L10n.tr("settings.defaultCurrency"), selection: currencyBinding) {
                     ForEach(Self.currencyCodes, id: \.self) { code in
                         Text(code).tag(code)
@@ -94,39 +97,60 @@ struct SettingsView: View {
                     }
                     .accessibilityIdentifier("settingsReminderFreeLabel")
                 }
+            } header: {
+                Text(L10n.tr("settings.section.preferences"))
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
+                    .textCase(nil)
             }
 
-            Section(L10n.tr("settings.section.notifications")) {
+            Section {
                 NotificationStatusRow(status: notificationStatus)
+            } header: {
+                Text(L10n.tr("settings.section.notifications"))
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
+                    .textCase(nil)
             }
 
-            Section(L10n.tr("settings.section.data")) {
+            Section {
                 ExportCSVRow(isPro: entitlementsStore.isPro) {
                     exportCSV()
                 }
+            } header: {
+                Text(L10n.tr("settings.section.data"))
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
+                    .textCase(nil)
             }
 
-            Section(L10n.tr("settings.section.pro")) {
+            Section {
                 HStack {
                     Text(L10n.tr("settings.pro.status.title"))
                     Spacer()
                     Text(entitlementsStore.isPro
                          ? L10n.tr("settings.pro.status.pro")
                          : L10n.tr("settings.pro.status.free"))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.renewoTextSecondary)
                         .accessibilityIdentifier("settingsProStatusValueLabel")
                 }
                 .accessibilityIdentifier("settingsProStatusRow")
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.renewoSurface)
 
                 if entitlementsStore.isPro {
                     Text(L10n.tr("settings.pro.unlocked"))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.renewoTextSecondary)
                         .accessibilityIdentifier("settingsProUnlockedLabel")
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.renewoSurface)
                 } else {
                     Button(L10n.tr("settings.pro.upgrade")) {
                         showUpgradeSheet = true
                     }
                     .accessibilityIdentifier("settingsUpgradeButton")
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.renewoSurface)
                 }
 
                 Button {
@@ -143,8 +167,17 @@ struct SettingsView: View {
                 }
                 .disabled(isRestoringPurchases)
                 .accessibilityIdentifier("settingsRestoreButton")
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.renewoSurface)
+            } header: {
+                Text(L10n.tr("settings.section.pro"))
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
+                    .textCase(nil)
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(Color.renewoBackground)
         .accessibilityIdentifier("settingsView")
     }
 
