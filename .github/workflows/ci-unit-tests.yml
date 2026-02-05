@@ -144,7 +144,7 @@ jobs:
           ./scripts/coverage-summary.sh TestResults/UnitTests.xcresult | tee TestResults/coverage-summary.md
 
       - name: Enforce coverage threshold
-        if: env.MIN_COVERAGE != ''
+        if: ${{ env.MIN_COVERAGE != '' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -155,10 +155,12 @@ jobs:
             exit 1
           fi
 
-          python3 - <<PY "$coverage" "$MIN_COVERAGE"
+          COVERAGE="$coverage" MIN_COVERAGE="$MIN_COVERAGE" python3 - <<'PY'
 import sys
-coverage = float(sys.argv[1])
-minimum = float(sys.argv[2])
+import os
+
+coverage = float(os.environ["COVERAGE"])
+minimum = float(os.environ["MIN_COVERAGE"])
 if coverage + 1e-9 < minimum:
     raise SystemExit(f\"Coverage {coverage:.1f}% is below the required minimum {minimum:.1f}%\")
 print(f\"Coverage {coverage:.1f}% meets the minimum {minimum:.1f}%\")
