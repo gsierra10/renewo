@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0F1A876A8D6C79A13F546655 /* SubscriptionDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CB147D0AB216EAFD9656CD /* SubscriptionDraft.swift */; };
+		70504A1000AE430C9D7D6882 /* RenewoSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133CFB0ADC34033ABFB3F3E /* RenewoSpacing.swift */; };
 		174B15439C3385606A2F3D0B /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B181945DA80DF30038019BD /* SettingsStoreTests.swift */; };
+		84AD0C497D3E419FA5679CE1 /* RenewoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8434D3BE67F4C68B6FE2A36 /* RenewoTheme.swift */; };
 		23A02357ECA511228BD9E178 /* RenewoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE5DC94FA78E5FA039C77D /* RenewoApp.swift */; };
+		A819D0AA937C4535980C95B6 /* RenewoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D453AC01F55456696A5802F /* RenewoColors.swift */; };
+		A9C3B568FAE548F0AB2A9CAF /* RenewoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989B1C8DBE145B19B807751 /* RenewoTypography.swift */; };
 		32800B1A2B19EBE07CBF5F2C /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683679062ED688F51708D1B /* RepositoryErrors.swift */; };
 		364B30AA0B6B36ECECC79883 /* ProGatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A5F7884621D111628D893 /* ProGatingTests.swift */; };
 		3A7FB2B9D2B2CC2BF50AF06A /* NotificationStatusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248BE92040D78AB431895034 /* NotificationStatusRow.swift */; };
@@ -79,8 +83,11 @@
 		0E28F74155FF9382F8F35EF0 /* RenewoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = RenewoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12139A5E48DACA078B2518AD /* NotificationScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduling.swift; sourceTree = "<group>"; };
 		1312799DA2C55BDD5D18AA78 /* RenewoBasicFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoBasicFlowUITests.swift; sourceTree = "<group>"; };
+		1133CFB0ADC34033ABFB3F3E /* RenewoSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoSpacing.swift; sourceTree = "<group>"; };
+		1D453AC01F55456696A5802F /* RenewoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoColors.swift; sourceTree = "<group>"; };
 		248BE92040D78AB431895034 /* NotificationStatusRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStatusRow.swift; sourceTree = "<group>"; };
 		2F50540A7EDCA5B4EEC0A0F9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A989B1C8DBE145B19B807751 /* RenewoTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoTypography.swift; sourceTree = "<group>"; };
 		361FD9EEC39EA79497344D3B /* RecurrenceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurrenceEngine.swift; sourceTree = "<group>"; };
 		3E9239E086BC8DD100F0E013 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		40728417272DAB74140D267C /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 		9D46BD5BAC4D1E954C6DDEC1 /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
 		A1C2D3E4F5A6B7C8D9E0F1A2 /* CSVExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExporter.swift; sourceTree = "<group>"; };
 		A223B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRestoreUXUITests.swift; sourceTree = "<group>"; };
+		F8434D3BE67F4C68B6FE2A36 /* RenewoTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoTheme.swift; sourceTree = "<group>"; };
 		B0C811CC109398B89B50333B /* Renewo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Renewo.xcdatamodel; sourceTree = "<group>"; };
 		B1C2D3E4F5A6B7C8D9E0F1B2 /* ExportCSVRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCSVRow.swift; sourceTree = "<group>"; };
 		B2D0F4C1E78A4F62B7C9D3A1 /* FreeLimitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeLimitUITests.swift; sourceTree = "<group>"; };
@@ -295,6 +303,17 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		A129786C6A3B4535926B543B /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				1D453AC01F55456696A5802F /* RenewoColors.swift */,
+				1133CFB0ADC34033ABFB3F3E /* RenewoSpacing.swift */,
+				A989B1C8DBE145B19B807751 /* RenewoTypography.swift */,
+				F8434D3BE67F4C68B6FE2A36 /* RenewoTheme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		CF7E31E4B1230ED8E7908EE7 /* RenewoApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +357,7 @@
 		EC9E7A7D35543045E1185A86 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A129786C6A3B4535926B543B /* DesignSystem */,
 				5AB3CBBB2B1C9F8EBB5E5375 /* Main */,
 				11A903343ED63BE7298C5DFE /* Components */,
 				00386E67244AEC7A40BD9B6A /* AddEdit */,
@@ -529,7 +549,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A02357ECA511228BD9E178 /* RenewoApp.swift in Sources */,
+				A819D0AA937C4535980C95B6 /* RenewoColors.swift in Sources */,
 				5D599875C7B2E1336614EBA2 /* RootView.swift in Sources */,
+				70504A1000AE430C9D7D6882 /* RenewoSpacing.swift in Sources */,
+				A9C3B568FAE548F0AB2A9CAF /* RenewoTypography.swift in Sources */,
+				84AD0C497D3E419FA5679CE1 /* RenewoTheme.swift in Sources */,
 				3A9461D28156E9C85E593B4F /* AppContainer.swift in Sources */,
 				9A9CC3B953AA71B3830A13FC /* BillingCycle.swift in Sources */,
 				F93E3E3F13C90335515C5D36 /* RecurrenceEngine.swift in Sources */,
