@@ -35,6 +35,8 @@
 		8D565A03F0AB4E9DF161652E /* TotalsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D49A2A09115E67425209A /* TotalsCalculator.swift */; };
 		94360CDF8CBE798EDEF4FD46 /* TotalsCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E4EE2A384F00B9FD14984 /* TotalsCalculatorTests.swift */; };
 		9639911B08FD8FC2244218BC /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA870573CA7570574185C68B /* CurrencyFormatter.swift */; };
+		E89FD551653F48FDBCA93574 /* SentryBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE239DC7104E9CB1D309E7 /* SentryBootstrap.swift */; };
+		67F008BBD625478F9F50EAF7 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 185FD89E4A2541DAB34422E9 /* Sentry */; };
 		9A9CC3B953AA71B3830A13FC /* BillingCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B3ABC4AA0DF28D2993A370 /* BillingCycle.swift */; };
 		A05CE9FAFF65705C0049A9E2 /* NotificationScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12139A5E48DACA078B2518AD /* NotificationScheduling.swift */; };
 		A2C3D4E5F6A7B8C9D0E1F2A3 /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2D3E4F5A6B7C8D9E0F1A2 /* CSVExporter.swift */; };
@@ -110,6 +112,7 @@
 		753E4EE2A384F00B9FD14984 /* TotalsCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsCalculatorTests.swift; sourceTree = "<group>"; };
 		75E88E10580F30ADA879E946 /* UNNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationScheduler.swift; sourceTree = "<group>"; };
 		8B7FD216D63D17418E52D2D0 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		1FEE239DC7104E9CB1D309E7 /* SentryBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryBootstrap.swift; sourceTree = "<group>"; };
 		9A9B59733CCD9E04E39D8BAD /* SubscriptionFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFormValidator.swift; sourceTree = "<group>"; };
 		9B181945DA80DF30038019BD /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 		9D46BD5BAC4D1E954C6DDEC1 /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F008BBD625478F9F50EAF7 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,10 +300,19 @@
 			path = RenewoUITests;
 			sourceTree = "<group>";
 		};
+		817C470FC37F468589E9E396 /* Observability */ = {
+			isa = PBXGroup;
+			children = (
+				1FEE239DC7104E9CB1D309E7 /* SentryBootstrap.swift */,
+			);
+			path = Observability;
+			sourceTree = "<group>";
+		};
 		CDF83FD989E60F210402362D /* App */ = {
 			isa = PBXGroup;
 			children = (
 				53C9EFC6D892AA68BFCC8C92 /* Environment */,
+				817C470FC37F468589E9E396 /* Observability */,
 				2F50540A7EDCA5B4EEC0A0F9 /* RootView.swift */,
 			);
 			path = App;
@@ -427,6 +440,9 @@
 			);
 			dependencies = (
 			);
+			packageProductDependencies = (
+				185FD89E4A2541DAB34422E9 /* Sentry */,
+			);
 			name = Renewo;
 			productName = Renewo;
 			productReference = 6D5257D7653ACAAFA9D88CD6 /* Renewo.app */;
@@ -484,6 +500,9 @@
 				it,
 			);
 			mainGroup = 676226E236A23E238E3B1C77;
+			packageReferences = (
+				886F91D6BA1F481DAD323C77 /* sentry-cocoa */,
+			);
 			productRefGroup = FC4C011F1BD38F1F34920FBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -559,6 +578,7 @@
 				A9C3B568FAE548F0AB2A9CAF /* RenewoTypography.swift in Sources */,
 				84AD0C497D3E419FA5679CE1 /* RenewoTheme.swift in Sources */,
 				3A9461D28156E9C85E593B4F /* AppContainer.swift in Sources */,
+				E89FD551653F48FDBCA93574 /* SentryBootstrap.swift in Sources */,
 				9A9CC3B953AA71B3830A13FC /* BillingCycle.swift in Sources */,
 				F93E3E3F13C90335515C5D36 /* RecurrenceEngine.swift in Sources */,
 				8D565A03F0AB4E9DF161652E /* TotalsCalculator.swift in Sources */,
@@ -851,6 +871,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		886F91D6BA1F481DAD323C77 /* sentry-cocoa */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		185FD89E4A2541DAB34422E9 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 886F91D6BA1F481DAD323C77 /* sentry-cocoa */;
+			productName = Sentry;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8C08E026D8B2BA8AD5E3B4ED /* Renewo.xcdatamodeld */ = {
