@@ -6,6 +6,10 @@ struct RenewoApp: App {
     @StateObject private var container = AppContainer()
     @State private var didPerformInitialRefresh = false
 
+    init() {
+        SentryBootstrap.start()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
