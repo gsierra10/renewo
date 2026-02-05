@@ -8,14 +8,15 @@
 "main.add" = "Abo hinzufügen";
 "main.delete.error.title" = "Löschen nicht möglich";
 "main.delete.error.message" = "Das Abo konnte nicht gelöscht werden.";
-"main.empty.title" = "Noch keine Abonnements";
-"main.empty.subtitle" = "Füge dein erstes Abo hinzu, um Verlängerungen und Summen zu verfolgen.";
+"main.empty.title" = "Füge dein erstes Abo hinzu, um Erneuerungen voraus zu sein.";
+"main.empty.subtitle" = "Wir erinnern dich, bevor es sich erneuert.";
 
 "total.monthly.title" = "Monatliche Summe";
+"total.monthly.thisMonth" = "Diesen Monat";
 "total.yearly.title" = "Jährliche Summe";
 "total.noSubscriptions" = "Keine Abonnements";
 
-"accessibility.total.monthly" = "Monatliche Summe";
+"accessibility.total.monthly" = "Gesamt für diesen Monat";
 "accessibility.total.yearly" = "Jährliche Summe";
 "accessibility.row.format" = "%@, verlängert am %@, %@";
 "accessibility.row.unknownDate" = "Unbekanntes Verlängerungsdatum";
@@ -30,6 +31,7 @@
 "add.field.currency" = "Währung";
 "add.field.billingCycle" = "Abrechnungszeitraum";
 "add.field.renewalDate" = "Verlängerungsdatum";
+"add.field.renewsOn" = "Erneuert am";
 "add.field.category" = "Kategorie";
 "add.reminder.pro.format" = "%d Tage vorher erinnern";
 "add.reminder.free.label" = "Erinnerungstage";
@@ -67,7 +69,7 @@
 "settings.notifications.status.notRequested" = "Nicht angefordert";
 "settings.notifications.status.unknown" = "Unbekannt";
 "settings.pro.unlocked" = "Pro freigeschaltet";
-"settings.pro.upgrade" = "Auf Pro upgraden";
+"settings.pro.upgrade" = "Pro-Vorteile ansehen";
 "settings.pro.restore" = "Käufe wiederherstellen";
 "settings.export.csv" = "CSV exportieren";
 "settings.export.locked" = "Pro erforderlich";

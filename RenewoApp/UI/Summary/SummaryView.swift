@@ -19,7 +19,7 @@ struct SummaryView: View {
                 TotalCardView(
                     totals: monthlyTotals,
                     formatter: formatter,
-                    title: L10n.tr("total.monthly.title"),
+                    title: L10n.tr("total.monthly.thisMonth"),
                     accessibilityLabel: L10n.tr("accessibility.total.monthly")
                 )
             } header: {

@@ -8,14 +8,15 @@
 "main.add" = "Add Subscription";
 "main.delete.error.title" = "Unable to Delete";
 "main.delete.error.message" = "Unable to delete subscription.";
-"main.empty.title" = "No subscriptions yet";
-"main.empty.subtitle" = "Add your first subscription to track renewals and totals.";
+"main.empty.title" = "Add your first subscription to stay ahead of renewals.";
+"main.empty.subtitle" = "We'll remind you before it renews.";
 
 "total.monthly.title" = "Monthly Total";
+"total.monthly.thisMonth" = "This month";
 "total.yearly.title" = "Yearly Total";
 "total.noSubscriptions" = "No subscriptions";
 
-"accessibility.total.monthly" = "Monthly total";
+"accessibility.total.monthly" = "This month total";
 "accessibility.total.yearly" = "Yearly total";
 "accessibility.row.format" = "%@, renews %@, %@";
 "accessibility.row.unknownDate" = "Unknown renewal date";
@@ -30,6 +31,7 @@
 "add.field.currency" = "Currency";
 "add.field.billingCycle" = "Billing Cycle";
 "add.field.renewalDate" = "Renewal Date";
+"add.field.renewsOn" = "Renews on";
 "add.field.category" = "Category";
 "add.reminder.pro.format" = "Remind %d days before";
 "add.reminder.free.label" = "Reminder Days";
@@ -67,7 +69,7 @@
 "settings.notifications.status.notRequested" = "Not requested";
 "settings.notifications.status.unknown" = "Unknown";
 "settings.pro.unlocked" = "Pro unlocked";
-"settings.pro.upgrade" = "Upgrade to Pro";
+"settings.pro.upgrade" = "See Pro benefits";
 "settings.pro.restore" = "Restore Purchases";
 "settings.export.csv" = "Export CSV";
 "settings.export.locked" = "Pro required";

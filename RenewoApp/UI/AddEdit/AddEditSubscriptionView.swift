@@ -68,7 +68,7 @@ struct AddEditSubscriptionView: View {
                     .pickerStyle(.segmented)
                     .accessibilityIdentifier("subscriptionBillingCyclePicker")
 
-                    DatePicker(L10n.tr("add.field.renewalDate"), selection: $draft.renewalDate, displayedComponents: .date)
+                    DatePicker(L10n.tr("add.field.renewsOn"), selection: $draft.renewalDate, displayedComponents: .date)
                         .accessibilityIdentifier("subscriptionRenewalDatePicker")
                 }
 
