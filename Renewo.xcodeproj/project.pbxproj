@@ -14,6 +14,7 @@
 		23A02357ECA511228BD9E178 /* RenewoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFE5DC94FA78E5FA039C77D /* RenewoApp.swift */; };
 		A819D0AA937C4535980C95B6 /* RenewoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D453AC01F55456696A5802F /* RenewoColors.swift */; };
 		A9C3B568FAE548F0AB2A9CAF /* RenewoTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989B1C8DBE145B19B807751 /* RenewoTypography.swift */; };
+		C93406E0F83C40F0AFFE4A7C /* RenewoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22D8A6BCDE341468A1634DC /* RenewoCard.swift */; };
 		32800B1A2B19EBE07CBF5F2C /* RepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683679062ED688F51708D1B /* RepositoryErrors.swift */; };
 		364B30AA0B6B36ECECC79883 /* ProGatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A5F7884621D111628D893 /* ProGatingTests.swift */; };
 		3A7FB2B9D2B2CC2BF50AF06A /* NotificationStatusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248BE92040D78AB431895034 /* NotificationStatusRow.swift */; };
@@ -115,6 +116,7 @@
 		9A9B59733CCD9E04E39D8BAD /* SubscriptionFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionFormValidator.swift; sourceTree = "<group>"; };
 		9B181945DA80DF30038019BD /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 		9D46BD5BAC4D1E954C6DDEC1 /* TotalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCardView.swift; sourceTree = "<group>"; };
+		D22D8A6BCDE341468A1634DC /* RenewoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoCard.swift; sourceTree = "<group>"; };
 		A1C2D3E4F5A6B7C8D9E0F1A2 /* CSVExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExporter.swift; sourceTree = "<group>"; };
 		A223B456C789D012E345F678 /* PurchaseRestoreUXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRestoreUXUITests.swift; sourceTree = "<group>"; };
 		F8434D3BE67F4C68B6FE2A36 /* RenewoTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewoTheme.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 		A129786C6A3B4535926B543B /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				D22D8A6BCDE341468A1634DC /* RenewoCard.swift */,
 				1D453AC01F55456696A5802F /* RenewoColors.swift */,
 				1133CFB0ADC34033ABFB3F3E /* RenewoSpacing.swift */,
 				A989B1C8DBE145B19B807751 /* RenewoTypography.swift */,
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A02357ECA511228BD9E178 /* RenewoApp.swift in Sources */,
+				C93406E0F83C40F0AFFE4A7C /* RenewoCard.swift in Sources */,
 				A819D0AA937C4535980C95B6 /* RenewoColors.swift in Sources */,
 				5D599875C7B2E1336614EBA2 /* RootView.swift in Sources */,
 				70504A1000AE430C9D7D6882 /* RenewoSpacing.swift in Sources */,
