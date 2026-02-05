@@ -8,44 +8,41 @@ struct TotalCardView: View {
     let accessibilityLabel: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(title)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+        RenewoCard {
+            VStack(alignment: .leading, spacing: .renewoS) {
+                Text(title)
+                    .font(.renewoSectionHeader)
+                    .foregroundColor(.renewoTextSecondary)
 
-            if totals.isEmpty {
-                Text(L10n.tr("common.placeholder"))
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.primary)
-            } else if totals.count == 1, let code = totals.keys.first, let amount = totals[code] {
-                Text(formatter.string(from: amount, currencyCode: code))
-                    .font(.largeTitle.weight(.bold))
-                    .foregroundColor(.primary)
-                    .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
-            } else {
-                VStack(alignment: .leading, spacing: 6) {
-                    ForEach(sortedTotals, id: \.code) { entry in
-                        HStack(alignment: .firstTextBaseline, spacing: 8) {
-                            Text(entry.code)
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text(formatter.string(from: entry.amount, currencyCode: entry.code))
-                                .font(.title3.weight(.semibold))
-                                .foregroundColor(.primary)
-                                .lineLimit(nil)
-                                .fixedSize(horizontal: false, vertical: true)
+                if totals.isEmpty {
+                    Text(L10n.tr("common.placeholder"))
+                        .font(.renewoAmountLarge)
+                        .foregroundColor(.renewoTextPrimary)
+                } else if totals.count == 1, let code = totals.keys.first, let amount = totals[code] {
+                    Text(formatter.string(from: amount, currencyCode: code))
+                        .font(.renewoAmountLarge)
+                        .foregroundColor(.renewoTextPrimary)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                } else {
+                    VStack(alignment: .leading, spacing: .renewoXS) {
+                        ForEach(sortedTotals, id: \.code) { entry in
+                            HStack(alignment: .firstTextBaseline, spacing: .renewoS) {
+                                Text(entry.code)
+                                    .font(.renewoCaption)
+                                    .foregroundColor(.renewoTextSecondary)
+                                Text(formatter.string(from: entry.amount, currencyCode: entry.code))
+                                    .font(.renewoBody.weight(.semibold))
+                                    .foregroundColor(.renewoTextPrimary)
+                                    .lineLimit(nil)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
                         }
                     }
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(.secondarySystemBackground))
-        )
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityLabel)
         .accessibilityValue(accessibilityValue)
