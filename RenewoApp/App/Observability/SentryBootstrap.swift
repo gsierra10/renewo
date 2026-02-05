@@ -12,7 +12,7 @@ enum SentryBootstrap {
             options.environment = isDebug ? "Debug" : "Release"
             options.enableCrashHandler = true
             options.sendDefaultPii = false
-            options.tracesSampleRate = tracingSampleRate(isDebug: isDebug)
+            options.tracesSampleRate = NSNumber(value: tracingSampleRate(isDebug: isDebug))
         }
     }
 
